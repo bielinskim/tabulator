@@ -1,5 +1,5 @@
 {
-  "name": "@bielinskim/tabulator-tables",
+  "name": "bielinskim-tabulator-tables",
   "version": "4.8.1",
   "description": "Interactive table generation JavaScript library",
   "main": "dist/js/tabulator.js",
