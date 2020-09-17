@@ -2,7 +2,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 /* Tabulator v4.8.1 (c) Oliver Folkerd */
 
-;(function (global, factory) {
+; (function (global, factory) {
 	if ((typeof exports === 'undefined' ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined') {
 		module.exports = factory();
 	} else if (typeof define === 'function' && define.amd) {
@@ -463,7 +463,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	ColumnManager.prototype.scrollHorizontal = function (left) {
 
 		var hozAdjust = 0,
-		    scrollWidth = this.element.scrollWidth - this.table.element.clientWidth;
+			scrollWidth = this.element.scrollWidth - this.table.element.clientWidth;
 
 		// this.tempScrollBlock();
 
@@ -503,9 +503,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	ColumnManager.prototype.generateColumnsFromRowData = function (data) {
 
 		var cols = [],
-		    definitions = this.table.options.autoColumnsDefinitions,
-		    row,
-		    sorter;
+			definitions = this.table.options.autoColumnsDefinitions,
+			row,
+			sorter;
 
 		if (data && data.length) {
 
@@ -631,7 +631,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 		while (self.headersElement.firstChild) {
 			self.headersElement.removeChild(self.headersElement.firstChild);
-		}self.columns = [];
+		} self.columns = [];
 
 		self.columnsByIndex = [];
 
@@ -668,8 +668,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	ColumnManager.prototype._addColumn = function (definition, before, nextToColumn) {
 
 		var column = new Column(definition, this),
-		    colEl = column.getElement(),
-		    index = nextToColumn ? this.findColumnIndex(nextToColumn) : nextToColumn;
+			colEl = column.getElement(),
+			index = nextToColumn ? this.findColumnIndex(nextToColumn) : nextToColumn;
 
 		if (nextToColumn && index > -1) {
 
@@ -737,7 +737,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	ColumnManager.prototype._verticalAlignHeaders = function () {
 
 		var self = this,
-		    minHeight = 0;
+			minHeight = 0;
 
 		self.columns.forEach(function (column) {
 
@@ -886,7 +886,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	ColumnManager.prototype.getDefinitions = function (active) {
 
 		var self = this,
-		    output = [];
+			output = [];
 
 		self.columnsByIndex.forEach(function (column) {
 
@@ -905,7 +905,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	ColumnManager.prototype.getDefinitionTree = function () {
 
 		var self = this,
-		    output = [];
+			output = [];
 
 		self.columns.forEach(function (column) {
 
@@ -918,8 +918,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	ColumnManager.prototype.getComponents = function (structured) {
 
 		var self = this,
-		    output = [],
-		    columns = structured ? self.columns : self.columnsByIndex;
+			output = [],
+			columns = structured ? self.columns : self.columnsByIndex;
 
 		columns.forEach(function (column) {
 
@@ -1007,8 +1007,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		var _this2 = this;
 
 		var fromIndex = columns.indexOf(from),
-		    toIndex,
-		    rows = [];
+			toIndex,
+			rows = [];
 
 		if (fromIndex > -1) {
 
@@ -1058,9 +1058,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		var _this3 = this;
 
 		var left = 0,
-		    offset = 0,
-		    adjust = 0,
-		    colEl = column.getElement();
+			offset = 0,
+			adjust = 0,
+			colEl = column.getElement();
 
 		return new Promise(function (resolve, reject) {
 
@@ -1154,11 +1154,11 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	ColumnManager.prototype.getFlexBaseWidth = function () {
 
 		var self = this,
-		    totalWidth = self.table.element.clientWidth,
-		    //table element width
+			totalWidth = self.table.element.clientWidth,
+			//table element width
 
 
-		fixedWidth = 0;
+			fixedWidth = 0;
 
 		//adjust for vertical scrollbar if present
 
@@ -1244,7 +1244,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	ColumnManager.prototype.deregisterColumn = function (column) {
 
 		var field = column.getField(),
-		    index;
+			index;
 
 		//remove from field list
 
@@ -1797,7 +1797,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	Column.prototype.setTooltip = function () {
 
 		var self = this,
-		    def = self.definition;
+			def = self.definition;
 
 		//set header tooltips
 
@@ -1842,11 +1842,11 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	Column.prototype._buildHeader = function () {
 
 		var self = this,
-		    def = self.definition;
+			def = self.definition;
 
 		while (self.element.firstChild) {
 			self.element.removeChild(self.element.firstChild);
-		}if (def.headerVertical) {
+		} if (def.headerVertical) {
 
 			self.element.classList.add("tabulator-col-vertical");
 
@@ -1930,10 +1930,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	Column.prototype._bindEvents = function () {
 
 		var self = this,
-		    def = self.definition,
-		    dblTap,
-		    tapHold,
-		    tap;
+			def = self.definition,
+			dblTap,
+			tapHold,
+			tap;
 
 		//setup header click event bindings
 
@@ -2118,8 +2118,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		var _this6 = this;
 
 		var def = this.definition,
-		    table = this.table,
-		    sortable;
+			table = this.table,
+			sortable;
 
 		//set column sorter
 
@@ -2229,7 +2229,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	Column.prototype._buildColumnHeaderContent = function () {
 
 		var def = this.definition,
-		    table = this.table;
+			table = this.table;
 
 		var contentElement = document.createElement("div");
 
@@ -2253,9 +2253,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	Column.prototype._buildColumnHeaderTitle = function () {
 
 		var self = this,
-		    def = self.definition,
-		    table = self.table,
-		    title;
+			def = self.definition,
+			table = self.table,
+			title;
 
 		var titleHolderElement = document.createElement("div");
 
@@ -2424,9 +2424,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	Column.prototype._getNestedData = function (data) {
 
 		var dataObj = data,
-		    structure = this.fieldStructure,
-		    length = structure.length,
-		    output;
+			structure = this.fieldStructure,
+			length = structure.length,
+			output;
 
 		for (var _i = 0; _i < length; _i++) {
 
@@ -2458,8 +2458,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	Column.prototype._setNestedData = function (data, value) {
 
 		var dataObj = data,
-		    structure = this.fieldStructure,
-		    length = structure.length;
+			structure = this.fieldStructure,
+			length = structure.length;
 
 		for (var _i2 = 0; _i2 < length; _i2++) {
 
@@ -3168,9 +3168,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	Column.prototype.defaultOptionList = ["title", "field", "columns", "visible", "align", "hozAlign", "vertAlign", "width", "minWidth", "widthGrow", "widthShrink", "resizable", "frozen", "responsive", "tooltip", "cssClass", "rowHandle", "hideInHtml", "print", "htmlOutput", "sorter", "sorterParams", "formatter", "formatterParams", "variableHeight", "editable", "editor", "editorParams", "validator", "mutator", "mutatorParams", "mutatorData", "mutatorDataParams", "mutatorEdit", "mutatorEditParams", "mutatorClipboard", "mutatorClipboardParams", "accessor", "accessorParams", "accessorData", "accessorDataParams", "accessorDownload", "accessorDownloadParams", "accessorClipboard", "accessorClipboardParams", "accessorPrint", "accessorPrintParams", "accessorHtmlOutput", "accessorHtmlOutputParams", "clipboard", "download", "downloadTitle", "topCalc", "topCalcParams", "topCalcFormatter", "topCalcFormatterParams", "bottomCalc", "bottomCalcParams", "bottomCalcFormatter", "bottomCalcFormatterParams", "cellClick", "cellDblClick", "cellContext", "cellTap", "cellDblTap", "cellTapHold", "cellMouseEnter", "cellMouseLeave", "cellMouseOver", "cellMouseOut", "cellMouseMove", "cellEditing", "cellEdited", "cellEditCancelled", "headerSort", "headerSortStartingDir", "headerSortTristate", "headerClick", "headerDblClick", "headerContext", "headerTap", "headerDblTap", "headerTapHold", "headerTooltip", "headerVertical", "headerHozAlign", "editableTitle", "titleFormatter", "titleFormatterParams", "headerFilter", "headerFilterPlaceholder", "headerFilterParams", "headerFilterEmptyCheck", "headerFilterFunc", "headerFilterFuncParams", "headerFilterLiveFilter", "print", "headerContextMenu", "headerMenu", "contextMenu",
 
-	// "headerClickMenu",
+		// "headerClickMenu",
 
-	"clickMenu", "formatterPrint", "formatterPrintParams", "formatterClipboard", "formatterClipboardParams", "formatterHtmlOutput", "formatterHtmlOutputParams", "titlePrint", "titleClipboard", "titleHtmlOutput", "titleDownload"];
+		"clickMenu", "formatterPrint", "formatterPrintParams", "formatterClipboard", "formatterClipboardParams", "formatterHtmlOutput", "formatterHtmlOutputParams", "titlePrint", "titleClipboard", "titleHtmlOutput", "titleDownload"];
 
 	//////////////// Event Bindings /////////////////
 
@@ -3474,9 +3474,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		var _this11 = this;
 
 		var rowIndex = this.getDisplayRows().indexOf(row),
-		    rowEl = row.getElement(),
-		    rowTop,
-		    offset = 0;
+			rowEl = row.getElement(),
+			rowTop,
+			offset = 0;
 
 		return new Promise(function (resolve, reject) {
 
@@ -3701,7 +3701,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	RowManager.prototype.deleteRow = function (row, blockRedraw) {
 
 		var allIndex = this.rows.indexOf(row),
-		    activeIndex = this.activeRows.indexOf(row);
+			activeIndex = this.activeRows.indexOf(row);
 
 		if (activeIndex > -1) {
 
@@ -3772,8 +3772,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		var _this13 = this;
 
 		var self = this,
-		    length = 0,
-		    rows = [];
+			length = 0,
+			rows = [];
 
 		return new Promise(function (resolve, reject) {
 
@@ -3845,10 +3845,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	RowManager.prototype.addRowActual = function (data, pos, index, blockRedraw) {
 
 		var row = data instanceof Row ? data : new Row(data || {}, this),
-		    top = this.findAddRowPos(pos),
-		    allIndex = -1,
-		    activeIndex,
-		    dispRows;
+			top = this.findAddRowPos(pos),
+			allIndex = -1,
+			activeIndex,
+			dispRows;
 
 		if (!index && this.table.options.pagination && this.table.options.paginationAddRow == "page") {
 
@@ -4105,7 +4105,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	RowManager.prototype.nextDisplayRow = function (row, rowOnly) {
 
 		var index = this.getDisplayRowIndex(row),
-		    nextRow = false;
+			nextRow = false;
 
 		if (index !== false && index < this.displayRowsCount - 1) {
 
@@ -4123,7 +4123,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	RowManager.prototype.prevDisplayRow = function (row, rowOnly) {
 
 		var index = this.getDisplayRowIndex(row),
-		    prevRow = false;
+			prevRow = false;
 
 		if (index) {
 
@@ -4160,7 +4160,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	RowManager.prototype.getData = function (active, transform) {
 
 		var output = [],
-		    rows = this.getRows(active);
+			rows = this.getRows(active);
 
 		rows.forEach(function (row) {
 
@@ -4176,7 +4176,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	RowManager.prototype.getComponents = function (active) {
 
 		var output = [],
-		    rows = this.getRows(active);
+			rows = this.getRows(active);
 
 		rows.forEach(function (row) {
 
@@ -4197,8 +4197,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		var _this15 = this;
 
 		var table = this.table,
-		    options = table.options,
-		    params = {};
+			options = table.options,
+			params = {};
 
 		if (table.modExists("page")) {
 
@@ -4231,7 +4231,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		table.modules.ajax.sendRequest().then(function (data) {
 
 			_this15._setDataActual(data, true);
-		}).catch(function (e) {});
+		}).catch(function (e) { });
 	};
 
 	//choose the path to refresh data after a filter update
@@ -4239,8 +4239,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	RowManager.prototype.filterRefresh = function () {
 
 		var table = this.table,
-		    options = table.options,
-		    left = this.scrollLeft;
+			options = table.options,
+			left = this.scrollLeft;
 
 		if (options.ajaxFiltering) {
 
@@ -4248,10 +4248,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 				table.modules.page.reset(true);
 
-				table.modules.page.setPage(1).then(function () {}).catch(function () {});
+				table.modules.page.setPage(1).then(function () { }).catch(function () { });
 			} else if (options.ajaxProgressiveLoad) {
 
-				table.modules.ajax.loadData().then(function () {}).catch(function () {});
+				table.modules.ajax.loadData().then(function () { }).catch(function () { });
 			} else {
 
 				//assume data is url, make ajax call to url to get data
@@ -4271,8 +4271,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	RowManager.prototype.sorterRefresh = function (loadOrignalData) {
 
 		var table = this.table,
-		    options = this.table.options,
-		    left = this.scrollLeft;
+			options = this.table.options,
+			left = this.scrollLeft;
 
 		if (options.ajaxSorting) {
 
@@ -4280,10 +4280,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 				table.modules.page.reset(true);
 
-				table.modules.page.setPage(1).then(function () {}).catch(function () {});
+				table.modules.page.setPage(1).then(function () { }).catch(function () { });
 			} else if (options.ajaxProgressiveLoad) {
 
-				table.modules.ajax.loadData().then(function () {}).catch(function () {});
+				table.modules.ajax.loadData().then(function () { }).catch(function () { });
 			} else {
 
 				//assume data is url, make ajax call to url to get data
@@ -4320,9 +4320,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	RowManager.prototype.refreshActiveData = function (stage, skipStage, renderInPosition) {
 
 		var self = this,
-		    table = this.table,
-		    cascadeOrder = ["all", "filter", "sort", "display", "freeze", "group", "tree", "page"],
-		    displayIndex;
+			table = this.table,
+			cascadeOrder = ["all", "filter", "sort", "display", "freeze", "group", "tree", "page"],
+			displayIndex;
 
 		if (this.redrawBlock) {
 
@@ -4645,11 +4645,11 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	RowManager.prototype.getVisibleRows = function (viewable) {
 
 		var topEdge = this.element.scrollTop,
-		    bottomEdge = this.element.clientHeight + topEdge,
-		    topFound = false,
-		    topRow = 0,
-		    bottomRow = 0,
-		    rows = this.getDisplayRows();
+			bottomEdge = this.element.clientHeight + topEdge,
+			topFound = false,
+			topRow = 0,
+			bottomRow = 0,
+			rows = this.getDisplayRows();
 
 		if (viewable) {
 
@@ -4913,8 +4913,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	RowManager.prototype.checkClassicModeGroupHeaderWidth = function () {
 
 		var self = this,
-		    element = this.tableElement,
-		    onlyGroupHeaders = true;
+			element = this.tableElement,
+			onlyGroupHeaders = true;
 
 		self.getDisplayRows().forEach(function (row, index) {
 
@@ -4969,7 +4969,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 		while (element.firstChild) {
 			element.removeChild(element.firstChild);
-		}element.style.paddingTop = "";
+		} element.style.paddingTop = "";
 
 		element.style.paddingBottom = "";
 
@@ -5016,14 +5016,14 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	RowManager.prototype._virtualRenderFill = function (position, forceMove, offset) {
 
 		var self = this,
-		    element = self.tableElement,
-		    holder = self.element,
-		    topPad = 0,
-		    rowsHeight = 0,
-		    topPadHeight = 0,
-		    i = 0,
-		    onlyGroupHeaders = true,
-		    rows = self.getDisplayRows();
+			element = self.tableElement,
+			holder = self.element,
+			topPad = 0,
+			rowsHeight = 0,
+			topPadHeight = 0,
+			i = 0,
+			onlyGroupHeaders = true,
+			rows = self.getDisplayRows();
 
 		position = position || 0;
 
@@ -5066,8 +5066,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 			while ((rowsHeight <= self.height + self.vDomWindowBuffer || i < self.vDomWindowMinTotalRows) && self.vDomBottom < self.displayRowsCount - 1) {
 
 				var index = self.vDomBottom + 1,
-				    row = rows[index],
-				    rowHeight = 0;
+					row = rows[index],
+					rowHeight = 0;
 
 				self.styleRow(row, index);
 
@@ -5254,13 +5254,13 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 
 		var table = this.tableElement,
-		    rows = this.getDisplayRows();
+			rows = this.getDisplayRows();
 
 		if (this.vDomTop) {
 
 			var index = this.vDomTop - 1,
-			    topRow = rows[index],
-			    topRowHeight = topRow.getHeight() || this.vDomRowHeight;
+				topRow = rows[index],
+				topRowHeight = topRow.getHeight() || this.vDomRowHeight;
 
 			//hide top row if needed
 
@@ -5321,8 +5321,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	RowManager.prototype._removeTopRow = function (topDiff) {
 
 		var table = this.tableElement,
-		    topRow = this.getDisplayRows()[this.vDomTop],
-		    topRowHeight = topRow.getHeight() || this.vDomRowHeight;
+			topRow = this.getDisplayRows()[this.vDomTop],
+			topRowHeight = topRow.getHeight() || this.vDomRowHeight;
 
 		if (topDiff >= topRowHeight) {
 
@@ -5349,13 +5349,13 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 
 		var table = this.tableElement,
-		    rows = this.getDisplayRows();
+			rows = this.getDisplayRows();
 
 		if (this.vDomBottom < this.displayRowsCount - 1) {
 
 			var index = this.vDomBottom + 1,
-			    bottomRow = rows[index],
-			    bottomRowHeight = bottomRow.getHeight() || this.vDomRowHeight;
+				bottomRow = rows[index],
+				bottomRowHeight = bottomRow.getHeight() || this.vDomRowHeight;
 
 			//hide bottom row if needed
 
@@ -5411,8 +5411,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	RowManager.prototype._removeBottomRow = function (bottomDiff) {
 
 		var table = this.tableElement,
-		    bottomRow = this.getDisplayRows()[this.vDomBottom],
-		    bottomRowHeight = bottomRow.getHeight() || this.vDomRowHeight;
+			bottomRow = this.getDisplayRows()[this.vDomBottom],
+			bottomRowHeight = bottomRow.getHeight() || this.vDomRowHeight;
 
 		if (bottomDiff >= bottomRowHeight) {
 
@@ -5472,7 +5472,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	RowManager.prototype.adjustTableSize = function () {
 
 		var initialHeight = this.element.clientHeight,
-		    modExists;
+			modExists;
 
 		if (this.renderMode === "virtual") {
 
@@ -5558,7 +5558,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	RowManager.prototype.redraw = function (force) {
 
 		var pos = 0,
-		    left = this.scrollLeft;
+			left = this.scrollLeft;
 
 		this.adjustTableSize();
 
@@ -5654,8 +5654,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	VDomHoz.prototype.compatabilityCheck = function () {
 
 		var options = this.table.options,
-		    frozen = false,
-		    ok = true;
+			frozen = false,
+			ok = true;
 
 		if (options.layout == "fitDataTable") {
 
@@ -5751,11 +5751,11 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	VDomHoz.prototype.dataChange = function () {
 
 		var change = false,
-		    collsWidth = 0,
-		    colEnd = 0,
-		    group,
-		    row,
-		    rowEl;
+			collsWidth = 0,
+			colEnd = 0,
+			group,
+			row,
+			rowEl;
 
 		if (this.table.options.layout === "fitData") {
 
@@ -6006,9 +6006,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	VDomHoz.prototype.addColRight = function () {
 
 		var column = this.columns[this.rightCol + 1],
-		    rows,
-		    oldWidth,
-		    widthDiff;
+			rows,
+			oldWidth,
+			widthDiff;
 
 		if (column && column.modules.vdomHoz.leftPos <= this.vDomScrollPosRight) {
 
@@ -6064,7 +6064,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	VDomHoz.prototype.addColLeft = function () {
 
 		var column = this.columns[this.leftCol - 1],
-		    rows;
+			rows;
 
 		if (column && column.modules.vdomHoz.rightPos >= this.vDomScrollPosLeft) {
 
@@ -6101,7 +6101,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	VDomHoz.prototype.removeColRight = function (column) {
 
 		var column = this.columns[this.rightCol],
-		    rows;
+			rows;
 
 		if (column && column.modules.vdomHoz.leftPos > this.vDomScrollPosRight) {
 
@@ -6132,7 +6132,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	VDomHoz.prototype.removeColLeft = function () {
 
 		var column = this.columns[this.leftCol],
-		    rows;
+			rows;
 
 		if (column && column.modules.vdomHoz.rightPos < this.vDomScrollPosLeft) {
 
@@ -6194,7 +6194,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 				while (row.element.firstChild) {
 					row.element.removeChild(row.element.firstChild);
-				}this.initializeRow(row);
+				} this.initializeRow(row);
 			}
 		}
 	};
@@ -6484,9 +6484,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	Row.prototype.generateElement = function () {
 
 		var self = this,
-		    dblTap,
-		    tapHold,
-		    tap;
+			dblTap,
+			tapHold,
+			tap;
 
 		//set row selection characteristics
 
@@ -6786,7 +6786,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	Row.prototype.calcHeight = function (force) {
 
 		var maxHeight = 0,
-		    minHeight = this.table.options.resizableRows ? this.element.clientHeight : 0;
+			minHeight = this.table.options.resizableRows ? this.element.clientHeight : 0;
 
 		this.cells.forEach(function (cell) {
 
@@ -6926,8 +6926,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		var _this22 = this;
 
 		var visible = Tabulator.prototype.helpers.elVisible(this.element),
-		    tempData = {},
-		    newRowData;
+			tempData = {},
+			newRowData;
 
 		return new Promise(function (resolve, reject) {
 
@@ -7117,7 +7117,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 			for (var i = index - 1; i >= 0; i--) {
 
 				var cell = this.cells[i],
-				    allowEdit = true;
+					allowEdit = true;
 
 				if (cell.column.modules.edit && Tabulator.prototype.helpers.elVisible(cell.getElement())) {
 
@@ -7244,7 +7244,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 		//remove any reactive data watchers from row object
 
-		if (this.table.options.reactiveData && this.table.modExists("reactiveData", true)) {}
+		if (this.table.options.reactiveData && this.table.modExists("reactiveData", true)) { }
 
 		// this.table.modules.reactiveData.unwatchRow(this);
 
@@ -7327,7 +7327,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 		while (this.element.firstChild) {
 			this.element.removeChild(this.element.firstChild);
-		}this.element = false;
+		} this.element = false;
 
 		this.modules = {};
 
@@ -7546,27 +7546,27 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	Cell.prototype._configureCell = function () {
 
 		var self = this,
-		    cellEvents = self.column.cellEvents,
-		    element = self.element,
-		    field = this.column.getField(),
-		    vertAligns = {
+			cellEvents = self.column.cellEvents,
+			element = self.element,
+			field = this.column.getField(),
+			vertAligns = {
 
-			top: "flex-start",
+				top: "flex-start",
 
-			bottom: "flex-end",
+				bottom: "flex-end",
 
-			middle: "center"
+				middle: "center"
 
-		},
-		    hozAligns = {
+			},
+			hozAligns = {
 
-			left: "flex-start",
+				left: "flex-start",
 
-			right: "flex-end",
+				right: "flex-end",
 
-			center: "center"
+				center: "center"
 
-		};
+			};
 
 		//set text alignment
 
@@ -7638,7 +7638,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	Cell.prototype._bindClickEvents = function (cellEvents) {
 
 		var self = this,
-		    element = self.element;
+			element = self.element;
 
 		//set event bindings
 
@@ -7710,7 +7710,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 						window.getSelection().addRange(range);
 					}
-				} catch (e) {}
+				} catch (e) { }
 			});
 		}
 
@@ -7736,7 +7736,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	Cell.prototype._bindMouseEvents = function (cellEvents) {
 
 		var self = this,
-		    element = self.element;
+			element = self.element;
 
 		if (cellEvents.cellMouseEnter || self.table.options.cellMouseEnter) {
 
@@ -7832,10 +7832,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	Cell.prototype._bindTouchEvents = function (cellEvents) {
 
 		var self = this,
-		    element = self.element,
-		    dblTap,
-		    tapHold,
-		    tap;
+			element = self.element,
+			dblTap,
+			tapHold,
+			tap;
 
 		if (cellEvents.cellTap || this.table.options.cellTap) {
 
@@ -7965,7 +7965,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 					while (this.element.firstChild) {
 						this.element.removeChild(this.element.firstChild);
-					}this.element.appendChild(val);
+					} this.element.appendChild(val);
 				} else {
 
 					this.element.innerHTML = "";
@@ -8064,7 +8064,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	Cell.prototype.setValue = function (value, mutate) {
 
 		var changed = this.setValueProcessData(value, mutate),
-		    component;
+			component;
 
 		if (changed) {
 
@@ -8326,15 +8326,15 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	Cell.prototype.nav = function () {
 
 		var self = this,
-		    nextCell = false,
-		    index = this.row.getCellIndex(this);
+			nextCell = false,
+			index = this.row.getCellIndex(this);
 
 		return {
 
 			next: function next() {
 
 				var nextCell = this.right(),
-				    nextRow;
+					nextRow;
 
 				if (!nextCell) {
 
@@ -8362,7 +8362,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 			prev: function prev() {
 
 				var nextCell = this.left(),
-				    prevRow;
+					prevRow;
 
 				if (!nextCell) {
 
@@ -8731,11 +8731,11 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		clipboardPasteAction: "insert", //how to insert pasted data into the table
 
 
-		clipboardCopied: function clipboardCopied() {}, //data has been copied to the clipboard
+		clipboardCopied: function clipboardCopied() { }, //data has been copied to the clipboard
 
-		clipboardPasted: function clipboardPasted() {}, //data has been pasted into the table
+		clipboardPasted: function clipboardPasted() { }, //data has been pasted into the table
 
-		clipboardPasteError: function clipboardPasteError() {}, //data has not successfully been pasted into the table
+		clipboardPasteError: function clipboardPasteError() { }, //data has not successfully been pasted into the table
 
 
 		downloadDataFormatter: false, //function to manipulate table data before it is downloaded
@@ -8771,9 +8771,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 		dataTreeStartExpanded: false,
 
-		dataTreeRowExpanded: function dataTreeRowExpanded() {}, //row has been expanded
+		dataTreeRowExpanded: function dataTreeRowExpanded() { }, //row has been expanded
 
-		dataTreeRowCollapsed: function dataTreeRowCollapsed() {}, //row has been collapsed
+		dataTreeRowCollapsed: function dataTreeRowCollapsed() { }, //row has been collapsed
 
 		dataTreeChildColumnCalcs: false, //include visible data tree rows in column calculations
 
@@ -8945,23 +8945,23 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 		movableRowsReceiver: "insert",
 
-		movableRowsSendingStart: function movableRowsSendingStart() {},
+		movableRowsSendingStart: function movableRowsSendingStart() { },
 
-		movableRowsSent: function movableRowsSent() {},
+		movableRowsSent: function movableRowsSent() { },
 
-		movableRowsSentFailed: function movableRowsSentFailed() {},
+		movableRowsSentFailed: function movableRowsSentFailed() { },
 
-		movableRowsSendingStop: function movableRowsSendingStop() {},
+		movableRowsSendingStop: function movableRowsSendingStop() { },
 
-		movableRowsReceivingStart: function movableRowsReceivingStart() {},
+		movableRowsReceivingStart: function movableRowsReceivingStart() { },
 
-		movableRowsReceived: function movableRowsReceived() {},
+		movableRowsReceived: function movableRowsReceived() { },
 
-		movableRowsReceivedFailed: function movableRowsReceivedFailed() {},
+		movableRowsReceivedFailed: function movableRowsReceivedFailed() { },
 
-		movableRowsReceivingStop: function movableRowsReceivingStop() {},
+		movableRowsReceivingStop: function movableRowsReceivingStop() { },
 
-		movableRowsElementDrop: function movableRowsElementDrop() {},
+		movableRowsElementDrop: function movableRowsElementDrop() { },
 
 		scrollToRowPosition: "top",
 
@@ -8983,15 +8983,15 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 		//table building callbacks
 
-		tableBuilding: function tableBuilding() {},
+		tableBuilding: function tableBuilding() { },
 
-		tableBuilt: function tableBuilt() {},
+		tableBuilt: function tableBuilt() { },
 
 		//render callbacks
 
-		renderStarted: function renderStarted() {},
+		renderStarted: function renderStarted() { },
 
-		renderComplete: function renderComplete() {},
+		renderComplete: function renderComplete() { },
 
 		//row callbacks
 
@@ -9021,21 +9021,21 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 		rowClickMenu: false,
 
-		rowAdded: function rowAdded() {},
+		rowAdded: function rowAdded() { },
 
-		rowDeleted: function rowDeleted() {},
+		rowDeleted: function rowDeleted() { },
 
-		rowMoved: function rowMoved() {},
+		rowMoved: function rowMoved() { },
 
-		rowUpdated: function rowUpdated() {},
+		rowUpdated: function rowUpdated() { },
 
-		rowSelectionChanged: function rowSelectionChanged() {},
+		rowSelectionChanged: function rowSelectionChanged() { },
 
-		rowSelected: function rowSelected() {},
+		rowSelected: function rowSelected() { },
 
-		rowDeselected: function rowDeselected() {},
+		rowDeselected: function rowDeselected() { },
 
-		rowResized: function rowResized() {},
+		rowResized: function rowResized() { },
 
 		//cell callbacks
 
@@ -9063,33 +9063,33 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 		cellMouseMove: false,
 
-		cellEditing: function cellEditing() {},
+		cellEditing: function cellEditing() { },
 
-		cellEdited: function cellEdited() {},
+		cellEdited: function cellEdited() { },
 
-		cellEditCancelled: function cellEditCancelled() {},
+		cellEditCancelled: function cellEditCancelled() { },
 
 		//column callbacks
 
 		columnMoved: false,
 
-		columnResized: function columnResized() {},
+		columnResized: function columnResized() { },
 
-		columnTitleChanged: function columnTitleChanged() {},
+		columnTitleChanged: function columnTitleChanged() { },
 
-		columnVisibilityChanged: function columnVisibilityChanged() {},
+		columnVisibilityChanged: function columnVisibilityChanged() { },
 
 		//HTML iport callbacks
 
-		htmlImporting: function htmlImporting() {},
+		htmlImporting: function htmlImporting() { },
 
-		htmlImported: function htmlImported() {},
+		htmlImported: function htmlImported() { },
 
 		//data callbacks
 
-		dataLoading: function dataLoading() {},
+		dataLoading: function dataLoading() { },
 
-		dataLoaded: function dataLoaded() {},
+		dataLoaded: function dataLoaded() { },
 
 		dataEdited: false, //DEPRECATED
 
@@ -9097,11 +9097,11 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 		//ajax callbacks
 
-		ajaxRequesting: function ajaxRequesting() {},
+		ajaxRequesting: function ajaxRequesting() { },
 
 		ajaxResponse: false,
 
-		ajaxError: function ajaxError() {},
+		ajaxError: function ajaxError() { },
 
 		//filtering callbacks
 
@@ -9111,9 +9111,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 		//sorting callbacks
 
-		dataSorting: function dataSorting() {},
+		dataSorting: function dataSorting() { },
 
-		dataSorted: function dataSorted() {},
+		dataSorted: function dataSorted() { },
 
 		//grouping callbacks
 
@@ -9121,11 +9121,11 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 		groupClosedShowCalcs: false,
 
-		dataGrouping: function dataGrouping() {},
+		dataGrouping: function dataGrouping() { },
 
 		dataGrouped: false,
 
-		groupVisibilityChanged: function groupVisibilityChanged() {},
+		groupVisibilityChanged: function groupVisibilityChanged() { },
 
 		groupClick: false,
 
@@ -9147,29 +9147,29 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 		//pagination callbacks
 
-		pageLoaded: function pageLoaded() {},
+		pageLoaded: function pageLoaded() { },
 
 		//localization callbacks
 
-		localized: function localized() {},
+		localized: function localized() { },
 
 		//validation callbacks
 
 		validationMode: "blocking",
 
-		validationFailed: function validationFailed() {},
+		validationFailed: function validationFailed() { },
 
 		//history callbacks
 
-		historyUndo: function historyUndo() {},
+		historyUndo: function historyUndo() { },
 
-		historyRedo: function historyRedo() {},
+		historyRedo: function historyRedo() { },
 
 		//scroll callbacks
 
-		scrollHorizontal: function scrollHorizontal() {},
+		scrollHorizontal: function scrollHorizontal() { },
 
-		scrollVertical: function scrollVertical() {}
+		scrollVertical: function scrollVertical() { }
 
 	};
 
@@ -9438,8 +9438,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		var _this24 = this;
 
 		var element = this.element,
-		    mod = this.modules,
-		    options = this.options;
+			mod = this.modules,
+			options = this.options;
 
 		options.tableBuilding.call(this);
 
@@ -9689,7 +9689,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 					if ((self.options.ajaxURL || self.options.ajaxURLGenerator) && self.modExists("ajax")) {
 
-						self.modules.ajax.loadData(false, true).then(function () {}).catch(function () {
+						self.modules.ajax.loadData(false, true).then(function () { }).catch(function () {
 
 							if (self.options.paginationInitialPage) {
 
@@ -9712,7 +9712,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 				if (self.options.ajaxURL) {
 
-					self.modules.page.setPage(self.options.paginationInitialPage).then(function () {}).catch(function () {});
+					self.modules.page.setPage(self.options.paginationInitialPage).then(function () { }).catch(function () { });
 				} else {
 
 					self.rowManager.setData([], false, true);
@@ -9727,7 +9727,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 				if ((self.options.ajaxURL || self.options.ajaxURLGenerator) && self.modExists("ajax")) {
 
-					self.modules.ajax.loadData(false, true).then(function () {}).catch(function () {});
+					self.modules.ajax.loadData(false, true).then(function () { }).catch(function () { });
 				} else {
 
 					self.rowManager.setData(self.options.data, false, true);
@@ -9779,7 +9779,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 		while (element.firstChild) {
 			element.removeChild(element.firstChild);
-		}element.classList.remove("tabulator");
+		} element.classList.remove("tabulator");
 	};
 
 	Tabulator.prototype._detectBrowser = function () {
@@ -9844,8 +9844,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 			input.addEventListener("change", function (e) {
 
 				var file = input.files[0],
-				    reader = new FileReader(),
-				    data;
+					reader = new FileReader(),
+					data;
 
 				reader.readAsText(file);
 
@@ -10164,8 +10164,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		var _this28 = this;
 
 		var self = this,
-		    rows = [],
-		    responses = 0;
+			rows = [],
+			responses = 0;
 
 		return new Promise(function (resolve, reject) {
 
@@ -10266,9 +10266,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		return new Promise(function (resolve, reject) {
 
 			var self = _this29,
-			    count = 0,
-			    successCount = 0,
-			    foundRows = [];
+				count = 0,
+				successCount = 0,
+				foundRows = [];
 
 			function doneCheck() {
 
@@ -11123,7 +11123,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 			this.modules.page.setPageSize(size);
 
-			this.modules.page.setPage(1).then(function () {}).catch(function () {});
+			this.modules.page.setPage(1).then(function () { }).catch(function () { });
 		} else {
 
 			return false;
@@ -11676,8 +11676,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		lookupTable: function lookupTable(query, silent) {
 
 			var results = [],
-			    matches,
-			    match;
+				matches,
+				match;
 
 			if (typeof query === "string") {
 
@@ -11841,9 +11841,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 			var _this41 = this;
 
 			var colsWidth = 0,
-			    tableWidth = this.table.rowManager.element.clientWidth,
-			    gap = 0,
-			    lastCol = false;
+				tableWidth = this.table.rowManager.element.clientWidth,
+				gap = 0,
+				lastCol = false;
 
 			columns.forEach(function (column, i) {
 
@@ -11954,12 +11954,12 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 			function scaleColumns(columns, freeSpace, colWidth, shrinkCols) {
 
 				var oversizeCols = [],
-				    oversizeSpace = 0,
-				    remainingSpace = 0,
-				    nextColWidth = 0,
-				    gap = 0,
-				    changeUnits = 0,
-				    undersizeCols = [];
+					oversizeSpace = 0,
+					remainingSpace = 0,
+					nextColWidth = 0,
+					gap = 0,
+					changeUnits = 0,
+					undersizeCols = [];
 
 				function calcGrow(col) {
 
@@ -12294,8 +12294,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	Localize.prototype.getText = function (path, value) {
 
 		var path = value ? path + "|" + value : path,
-		    pathArray = path.split("|"),
-		    text = this._getLangElement(pathArray, this.locale);
+			pathArray = path.split("|"),
+			text = this._getLangElement(pathArray, this.locale);
 
 		// if(text === false){
 
@@ -12441,8 +12441,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	Comms.prototype.getConnections = function (selectors) {
 
 		var self = this,
-		    connections = [],
-		    connection;
+			connections = [],
+			connection;
 
 		connection = Tabulator.prototype.comms.lookupTable(selectors);
 
@@ -12460,7 +12460,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	Comms.prototype.send = function (selectors, module, action, data) {
 
 		var self = this,
-		    connections = this.getConnections(selectors);
+			connections = this.getConnections(selectors);
 
 		connections.forEach(function (connection) {
 
@@ -12494,12 +12494,12 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	//initialize column accessor
 	Accessor.prototype.initializeColumn = function (column) {
 		var self = this,
-		    match = false,
-		    config = {};
+			match = false,
+			config = {};
 
 		this.allowedTypes.forEach(function (type) {
 			var key = "accessor" + (type.charAt(0).toUpperCase() + type.slice(1)),
-			    accessor;
+				accessor;
 
 			if (column.definition[key]) {
 				accessor = self.lookupAccessor(column.definition[key]);
@@ -12544,7 +12544,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	//apply accessor to row
 	Accessor.prototype.transformRow = function (row, type) {
 		var key = "accessor" + (type.charAt(0).toUpperCase() + type.slice(1)),
-		    rowComponent = row.getComponent();
+			rowComponent = row.getComponent();
 
 		//clone data object with deep copy to isolate internal data from returned result
 		var data = Tabulator.prototype.helpers.deepClone(row.data || {});
@@ -12571,8 +12571,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		return data;
 	},
 
-	//default accessors
-	Accessor.prototype.accessors = {};
+		//default accessors
+		Accessor.prototype.accessors = {};
 
 	Tabulator.prototype.registerModule("accessor", Accessor);
 	var Ajax = function Ajax(table) {
@@ -12740,7 +12740,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 			margin = this.table.options.ajaxProgressiveLoadScrollMargin || this.table.rowManager.getElement().clientHeight * 2;
 
 			if (diff < margin) {
-				this.table.modules.page.nextPage().then(function () {}).catch(function () {});
+				this.table.modules.page.nextPage().then(function () { }).catch(function () { });
 			}
 		}
 	};
@@ -12772,7 +12772,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	Ajax.prototype.generateParamsList = function (data, prefix) {
 		var self = this,
-		    output = [];
+			output = [];
 
 		prefix = prefix || "";
 
@@ -12793,7 +12793,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	Ajax.prototype.serializeParams = function (params) {
 		var output = this.generateParamsList(params),
-		    encoded = [];
+			encoded = [];
 
 		output.forEach(function (item) {
 			encoded.push(encodeURIComponent(item.key) + "=" + encodeURIComponent(item.value));
@@ -12807,10 +12807,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		var _this43 = this;
 
 		var self = this,
-		    url = self.url,
-		    requestNo,
-		    esc,
-		    query;
+			url = self.url,
+			requestNo,
+			esc,
+			query;
 
 		self.requestOrder++;
 		requestNo = self.requestOrder;
@@ -12867,7 +12867,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 			while (this.msgElement.firstChild) {
 				this.msgElement.removeChild(this.msgElement.firstChild);
-			}this.msgElement.classList.remove("tabulator-error");
+			} this.msgElement.classList.remove("tabulator-error");
 			this.msgElement.classList.add("tabulator-loading");
 
 			if (this.loadingElement) {
@@ -12885,7 +12885,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 		while (this.msgElement.firstChild) {
 			this.msgElement.removeChild(this.msgElement.firstChild);
-		}this.msgElement.classList.remove("tabulator-loading");
+		} this.msgElement.classList.remove("tabulator-loading");
 		this.msgElement.classList.add("tabulator-error");
 
 		if (this.errorElement) {
@@ -12925,7 +12925,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	Ajax.prototype.defaultLoaderPromise = function (url, config, params) {
 		var self = this,
-		    contentType;
+			contentType;
 
 		return new Promise(function (resolve, reject) {
 
@@ -12974,9 +12974,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 				if (config.mode == "cors") {
 
-					if (typeof config.headers["Access-Control-Allow-Origin"] === "undefined") {
-						config.headers["Access-Control-Allow-Origin"] = window.location.origin;
-					}
+					// if (typeof config.headers["Access-Control-Allow-Origin"] === "undefined") {
+					// 	config.headers["Access-Control-Allow-Origin"] = window.location.origin;
+					// }
 
 					if (typeof config.credentials === "undefined") {
 						config.credentials = 'same-origin';
@@ -13024,7 +13024,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 			headers: {},
 			body: function body(url, config, params) {
 				var output = this.generateParamsList(params),
-				    form = new FormData();
+					form = new FormData();
 
 				output.forEach(function (item) {
 					form.append(item.key, item.value);
@@ -13099,7 +13099,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	};
 
 	//dummy functions to handle being mock column manager
-	ColumnCalcs.prototype.registerColumnField = function () {};
+	ColumnCalcs.prototype.registerColumnField = function () { };
 
 	//initialize column calcs
 	ColumnCalcs.prototype.initializeColumn = function (column) {
@@ -13201,7 +13201,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	ColumnCalcs.prototype.scrollHorizontal = function (left) {
 		var hozAdjust = 0,
-		    scrollWidth = this.table.columnManager.getElement().scrollWidth - this.table.element.clientWidth;
+			scrollWidth = this.table.columnManager.getElement().scrollWidth - this.table.element.clientWidth;
 
 		if (this.botInitialized && this.botRow) {
 			this.botRow.getElement().style.marginLeft = -left + "px";
@@ -13223,7 +13223,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 				this.topRow = row;
 				while (this.topElement.firstChild) {
 					this.topElement.removeChild(this.topElement.firstChild);
-				}this.topElement.appendChild(row.getElement());
+				} this.topElement.appendChild(row.getElement());
 				row.initialize(true);
 			}
 
@@ -13236,7 +13236,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 				this.botRow = row;
 				while (this.botElement.firstChild) {
 					this.botElement.removeChild(this.botElement.firstChild);
-				}this.botElement.appendChild(row.getElement());
+				} this.botElement.appendChild(row.getElement());
 				row.initialize(true);
 			}
 
@@ -13327,8 +13327,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	//generate stats row
 	ColumnCalcs.prototype.generateRow = function (pos, data) {
 		var self = this,
-		    rowData = this.generateRowData(pos, data),
-		    row;
+			rowData = this.generateRowData(pos, data),
+			row;
 
 		if (self.table.modExists("mutator")) {
 			self.table.modules.mutator.disable();
@@ -13400,10 +13400,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	//generate stats row
 	ColumnCalcs.prototype.generateRowData = function (pos, data) {
 		var rowData = {},
-		    calcs = pos == "top" ? this.topCalcs : this.botCalcs,
-		    type = pos == "top" ? "topCalc" : "botCalc",
-		    params,
-		    paramKey;
+			calcs = pos == "top" ? this.topCalcs : this.botCalcs,
+			type = pos == "top" ? "topCalc" : "botCalc",
+			params,
+			paramKey;
 
 		calcs.forEach(function (column) {
 			var values = [];
@@ -13444,8 +13444,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	//return the calculated
 	ColumnCalcs.prototype.getResults = function () {
 		var self = this,
-		    results = {},
-		    groups;
+			results = {},
+			groups;
 
 		if (this.table.options.groupBy && this.table.modExists("groupRows")) {
 			groups = this.table.modules.groupRows.getGroups(true);
@@ -13466,10 +13466,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	//get results from a group
 	ColumnCalcs.prototype.getGroupResults = function (group) {
 		var self = this,
-		    groupObj = group._getSelf(),
-		    subGroups = group.getSubGroups(),
-		    subGroupResults = {},
-		    results = {};
+			groupObj = group._getSelf(),
+			subGroups = group.getSubGroups(),
+			subGroupResults = {},
+			results = {};
 
 		subGroups.forEach(function (subgroup) {
 			subGroupResults[subgroup.getKey()] = self.getGroupResults(subgroup);
@@ -13488,7 +13488,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	ColumnCalcs.prototype.calculations = {
 		"avg": function avg(values, data, calcParams) {
 			var output = 0,
-			    precision = typeof calcParams.precision !== "undefined" ? calcParams.precision : 2;
+				precision = typeof calcParams.precision !== "undefined" ? calcParams.precision : 2;
 
 			if (values.length) {
 				output = values.reduce(function (sum, value) {
@@ -13505,7 +13505,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		},
 		"max": function max(values, data, calcParams) {
 			var output = null,
-			    precision = typeof calcParams.precision !== "undefined" ? calcParams.precision : false;
+				precision = typeof calcParams.precision !== "undefined" ? calcParams.precision : false;
 
 			values.forEach(function (value) {
 
@@ -13520,7 +13520,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		},
 		"min": function min(values, data, calcParams) {
 			var output = null,
-			    precision = typeof calcParams.precision !== "undefined" ? calcParams.precision : false;
+				precision = typeof calcParams.precision !== "undefined" ? calcParams.precision : false;
 
 			values.forEach(function (value) {
 
@@ -13535,7 +13535,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		},
 		"sum": function sum(values, data, calcParams) {
 			var output = 0,
-			    precision = typeof calcParams.precision !== "undefined" ? calcParams.precision : false;
+				precision = typeof calcParams.precision !== "undefined" ? calcParams.precision : false;
 
 			if (values.length) {
 				values.forEach(function (value) {
@@ -13579,8 +13579,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		this.table = table;
 		this.mode = true;
 
-		this.pasteParser = function () {};
-		this.pasteAction = function () {};
+		this.pasteParser = function () { };
+		this.pasteAction = function () { };
 		this.customSelection = false;
 		this.rowRange = false;
 		this.blocked = true; //block copy actions not originating from this command
@@ -13792,7 +13792,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	Clipboard.prototype.mutateData = function (data) {
 		var self = this,
-		    output = [];
+			output = [];
 
 		if (Array.isArray(data)) {
 			data.forEach(function (row) {
@@ -13832,11 +13832,11 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	Clipboard.prototype.pasteParsers = {
 		table: function table(clipboard) {
 			var data = [],
-			    success = false,
-			    headerFindSuccess = true,
-			    columns = this.table.columnManager.columns,
-			    columnMap = [],
-			    rows = [];
+				success = false,
+				headerFindSuccess = true,
+				columns = this.table.columnManager.columns,
+				columnMap = [],
+				rows = [];
 
 			//get data from clipboard into array of columns and rows.
 			clipboard = clipboard.split("\n");
@@ -13930,15 +13930,15 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		this.branchEl = null;
 		this.elementField = false;
 
-		this.startOpen = function () {};
+		this.startOpen = function () { };
 
 		this.displayIndex = 0;
 	};
 
 	DataTree.prototype.initialize = function () {
 		var dummyEl = null,
-		    firstCol = this.table.columnManager.getFirstVisibileColumn(),
-		    options = this.table.options;
+			firstCol = this.table.columnManager.getFirstVisibileColumn(),
+			options = this.table.options;
 
 		this.field = options.dataTreeChildField;
 		this.indent = options.dataTreeChildIndent;
@@ -14035,8 +14035,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	DataTree.prototype.layoutRow = function (row) {
 		var cell = this.elementField ? row.getCell(this.elementField) : row.getCells()[0],
-		    el = cell.getElement(),
-		    config = row.modules.dataTree;
+			el = cell.getElement(),
+			config = row.modules.dataTree;
 
 		if (config.branchEl) {
 			if (config.branchEl.parentNode) {
@@ -14081,8 +14081,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		var _this47 = this;
 
 		var config = row.modules.dataTree,
-		    el = el || row.getCells()[0].getElement(),
-		    oldControl = config.controlEl;
+			el = el || row.getCells()[0].getElement(),
+			oldControl = config.controlEl;
 
 		if (config.children !== false) {
 
@@ -14151,8 +14151,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		var _this49 = this;
 
 		var config = row.modules.dataTree,
-		    children = [],
-		    output = [];
+			children = [],
+			output = [];
 
 		if (config.children !== false && config.open) {
 			if (!Array.isArray(config.children)) {
@@ -14253,8 +14253,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	DataTree.prototype.getFilteredTreeChildren = function (row) {
 		var config = row.modules.dataTree,
-		    output = [],
-		    children;
+			output = [],
+			children;
 
 		if (config.children) {
 
@@ -14280,7 +14280,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	DataTree.prototype.rowDelete = function (row) {
 		var parent = row.modules.dataTree.parent,
-		    childIndex;
+			childIndex;
 
 		if (parent) {
 			childIndex = this.findChildIndex(row, parent);
@@ -14388,7 +14388,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		var _this52 = this;
 
 		var config = row.modules.dataTree,
-		    output = [];
+			output = [];
 
 		if (config.children) {
 
@@ -14433,7 +14433,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	//trigger file download
 	Download.prototype.download = function (type, filename, options, range, interceptCallback) {
 		var self = this,
-		    downloadFunc = false;
+			downloadFunc = false;
 
 		function buildLink(data, mime) {
 			if (interceptCallback) {
@@ -14491,8 +14491,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	Download.prototype.triggerDownload = function (data, mime, type, filename, newTab) {
 		var element = document.createElement('a'),
-		    blob = new Blob([data], { type: mime }),
-		    filename = filename || "Tabulator." + (typeof type === "function" ? "txt" : type);
+			blob = new Blob([data], { type: mime }),
+			filename = filename || "Tabulator." + (typeof type === "function" ? "txt" : type);
 
 		blob = this.table.options.downloadReady.call(this.table, data, blob);
 
@@ -14537,8 +14537,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	Download.prototype.downloaders = {
 		csv: function csv(list, options, setFileContents) {
 			var delimiter = options && options.delimiter ? options.delimiter : ",",
-			    fileContents = [],
-			    headers = [];
+				fileContents = [],
+				headers = [];
 
 			list.forEach(function (row) {
 				var item = [];
@@ -14635,22 +14635,22 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 		pdf: function pdf(list, options, setFileContents) {
 			var header = [],
-			    body = [],
-			    autoTableParams = {},
-			    rowGroupStyles = options.rowGroupStyles || {
-				fontStyle: "bold",
-				fontSize: 12,
-				cellPadding: 6,
-				fillColor: 220
-			},
-			    rowCalcStyles = options.rowCalcStyles || {
-				fontStyle: "bold",
-				fontSize: 10,
-				cellPadding: 4,
-				fillColor: 232
-			},
-			    jsPDFParams = options.jsPDF || {},
-			    title = options && options.title ? options.title : "";
+				body = [],
+				autoTableParams = {},
+				rowGroupStyles = options.rowGroupStyles || {
+					fontStyle: "bold",
+					fontSize: 12,
+					cellPadding: 6,
+					fillColor: 220
+				},
+				rowCalcStyles = options.rowCalcStyles || {
+					fontStyle: "bold",
+					fontSize: 10,
+					cellPadding: 4,
+					fillColor: 232
+				},
+				jsPDFParams = options.jsPDF || {},
+				title = options && options.title ? options.title : "";
 
 			if (!jsPDFParams.orientation) {
 				jsPDFParams.orientation = options.orientation || "landscape";
@@ -14751,20 +14751,24 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 		xlsx: function xlsx(list, options, setFileContents) {
 			var self = this,
-			    sheetName = options.sheetName || "Sheet1",
-			    workbook = XLSX.utils.book_new(),
-			    output;
+				sheetName = options.sheetName || "Sheet1",
+				workbook = XLSX.utils.book_new(),
+				output;
 
 			workbook.SheetNames = [];
 			workbook.Sheets = {};
 
 			function generateSheet() {
 				var rows = [],
-				    merges = [],
-				    worksheet = {},
-				    range = { s: { c: 0, r: 0 }, e: { c: list[0] ? list[0].columns.reduce(function (a, b) {
-							return a + (b && b.width ? b.width : 1);
-						}, 0) : 0, r: list.length } };
+					merges = [],
+					worksheet = {},
+					range = {
+						s: { c: 0, r: 0 }, e: {
+							c: list[0] ? list[0].columns.reduce(function (a, b) {
+								return a + (b && b.width ? b.width : 1);
+							}, 0) : 0, r: list.length
+						}
+					};
 
 				//parse row list
 				list.forEach(function (row, i) {
@@ -14838,7 +14842,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 				var view = new Uint8Array(buf);
 				for (var i = 0; i != s.length; ++i) {
 					view[i] = s.charCodeAt(i) & 0xFF;
-				}return buf;
+				} return buf;
 			}
 
 			output = XLSX.write(workbook, { bookType: 'xlsx', bookSST: true, type: 'binary' });
@@ -14868,12 +14872,12 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	//initialize column editor
 	Edit.prototype.initializeColumn = function (column) {
 		var self = this,
-		    config = {
-			editor: false,
-			blocked: false,
-			check: column.definition.editable,
-			params: column.definition.editorParams || {}
-		};
+			config = {
+				editor: false,
+				blocked: false,
+				check: column.definition.editable,
+				params: column.definition.editorParams || {}
+			};
 
 		//set column editor
 		switch (_typeof(column.definition.editor)) {
@@ -14929,7 +14933,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	Edit.prototype.clearEditor = function (cancel) {
 		var cell = this.currentCell,
-		    cellEl;
+			cellEl;
 
 		this.invalidEdit = false;
 
@@ -14947,7 +14951,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 			cellEl.classList.remove("tabulator-editing");
 			while (cellEl.firstChild) {
 				cellEl.removeChild(cellEl.firstChild);
-			}cell.row.getElement().classList.remove("tabulator-row-editing");
+			} cell.row.getElement().classList.remove("tabulator-row-editing");
 		}
 	};
 
@@ -14976,7 +14980,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	//return a formatted value for a cell
 	Edit.prototype.bindEditor = function (cell) {
 		var self = this,
-		    element = cell.getElement();
+			element = cell.getElement();
 
 		element.setAttribute("tabindex", 0);
 
@@ -15017,9 +15021,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	Edit.prototype.focusScrollAdjust = function (cell) {
 		if (this.table.rowManager.getRenderMode() == "virtual") {
 			var topEdge = this.table.rowManager.element.scrollTop,
-			    bottomEdge = this.table.rowManager.element.clientHeight + this.table.rowManager.element.scrollTop,
-			    rowEl = cell.row.getElement(),
-			    offset = rowEl.offsetTop;
+				bottomEdge = this.table.rowManager.element.clientHeight + this.table.rowManager.element.scrollTop,
+				rowEl = cell.row.getElement(),
+				offset = rowEl.offsetTop;
 
 			if (rowEl.offsetTop < topEdge) {
 				this.table.rowManager.element.scrollTop -= topEdge - rowEl.offsetTop;
@@ -15030,9 +15034,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 			}
 
 			var leftEdge = this.table.rowManager.element.scrollLeft,
-			    rightEdge = this.table.rowManager.element.clientWidth + this.table.rowManager.element.scrollLeft,
-			    cellEl = cell.getElement(),
-			    offset = cellEl.offsetLeft;
+				rightEdge = this.table.rowManager.element.clientWidth + this.table.rowManager.element.scrollLeft,
+				cellEl = cell.getElement(),
+				offset = cellEl.offsetLeft;
 
 			if (this.table.modExists("frozenColumns")) {
 				leftEdge += parseInt(this.table.modules.frozenColumns.leftMargin);
@@ -15051,12 +15055,12 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	Edit.prototype.edit = function (cell, e, forceEdit) {
 		var self = this,
-		    allowEdit = true,
-		    rendered = function rendered() {},
-		    element = cell.getElement(),
-		    cellEditor,
-		    component,
-		    params;
+			allowEdit = true,
+			rendered = function rendered() { },
+			element = cell.getElement(),
+			cellEditor,
+			component,
+			params;
 
 		//prevent editing if another cell is refusing to leave focus (eg. validation fail)
 		if (this.currentCell) {
@@ -15183,7 +15187,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 						cell.row.getElement().classList.add("tabulator-row-editing");
 						while (element.firstChild) {
 							element.removeChild(element.firstChild);
-						}element.appendChild(cellEditor);
+						} element.appendChild(cellEditor);
 
 						//trigger onRendered Callback
 						rendered();
@@ -15221,10 +15225,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	Edit.prototype.maskInput = function (el, options) {
 		var mask = options.mask,
-		    maskLetter = typeof options.maskLetterChar !== "undefined" ? options.maskLetterChar : "A",
-		    maskNumber = typeof options.maskNumberChar !== "undefined" ? options.maskNumberChar : "9",
-		    maskWildcard = typeof options.maskWildcardChar !== "undefined" ? options.maskWildcardChar : "*",
-		    success = false;
+			maskLetter = typeof options.maskLetterChar !== "undefined" ? options.maskLetterChar : "A",
+			maskNumber = typeof options.maskNumberChar !== "undefined" ? options.maskNumberChar : "9",
+			maskWildcard = typeof options.maskWildcardChar !== "undefined" ? options.maskWildcardChar : "*",
+			success = false;
 
 		function fillSymbols(index) {
 			var symbol = mask[index];
@@ -15236,7 +15240,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 		el.addEventListener("keydown", function (e) {
 			var index = el.value.length,
-			    char = e.key;
+				char = e.key;
 
 			if (e.keyCode > 46) {
 				if (index >= mask.length) {
@@ -15332,7 +15336,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 			//create and style input
 			var cellValue = cell.getValue(),
-			    input = document.createElement("input");
+				input = document.createElement("input");
 
 			input.setAttribute("type", editorParams.search ? "search" : "text");
 
@@ -15401,12 +15405,12 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		//resizable text area element
 		textarea: function textarea(cell, onRendered, success, cancel, editorParams) {
 			var self = this,
-			    cellValue = cell.getValue(),
-			    vertNav = editorParams.verticalNavigation || "hybrid",
-			    value = String(cellValue !== null && typeof cellValue !== "undefined" ? cellValue : ""),
-			    count = (value.match(/(?:\r\n|\r|\n)/g) || []).length + 1,
-			    input = document.createElement("textarea"),
-			    scrollHeight = 0;
+				cellValue = cell.getValue(),
+				vertNav = editorParams.verticalNavigation || "hybrid",
+				value = String(cellValue !== null && typeof cellValue !== "undefined" ? cellValue : ""),
+				count = (value.match(/(?:\r\n|\r|\n)/g) || []).length + 1,
+				input = document.createElement("textarea"),
+				scrollHeight = 0;
 
 			//create and style input
 			input.style.display = "block";
@@ -15515,8 +15519,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		number: function number(cell, onRendered, success, cancel, editorParams) {
 
 			var cellValue = cell.getValue(),
-			    vertNav = editorParams.verticalNavigation || "editor",
-			    input = document.createElement("input");
+				vertNav = editorParams.verticalNavigation || "editor",
+				input = document.createElement("input");
 
 			input.setAttribute("type", "number");
 
@@ -15620,7 +15624,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		range: function range(cell, onRendered, success, cancel, editorParams) {
 
 			var cellValue = cell.getValue(),
-			    input = document.createElement("input");
+				input = document.createElement("input");
 
 			input.setAttribute("type", "range");
 
@@ -15702,19 +15706,19 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 			var _this53 = this;
 
 			var self = this,
-			    cellEl = cell.getElement(),
-			    initialValue = cell.getValue(),
-			    vertNav = editorParams.verticalNavigation || "editor",
-			    initialDisplayValue = typeof initialValue !== "undefined" || initialValue === null ? Array.isArray(initialValue) ? initialValue : [initialValue] : typeof editorParams.defaultValue !== "undefined" ? editorParams.defaultValue : [],
-			    input = document.createElement("input"),
-			    listEl = document.createElement("div"),
-			    multiselect = editorParams.multiselect,
-			    dataItems = [],
-			    currentItem = {},
-			    displayItems = [],
-			    currentItems = [],
-			    blurable = true,
-			    blockListShow = false;
+				cellEl = cell.getElement(),
+				initialValue = cell.getValue(),
+				vertNav = editorParams.verticalNavigation || "editor",
+				initialDisplayValue = typeof initialValue !== "undefined" || initialValue === null ? Array.isArray(initialValue) ? initialValue : [initialValue] : typeof editorParams.defaultValue !== "undefined" ? editorParams.defaultValue : [],
+				input = document.createElement("input"),
+				listEl = document.createElement("div"),
+				multiselect = editorParams.multiselect,
+				dataItems = [],
+				currentItem = {},
+				displayItems = [],
+				currentItems = [],
+				blurable = true,
+				blockListShow = false;
 
 			if (Array.isArray(editorParams) || !Array.isArray(editorParams) && (typeof editorParams === 'undefined' ? 'undefined' : _typeof(editorParams)) === "object" && !editorParams.values) {
 				console.warn("DEPRECATION WARNING - values for the select editor must now be passed into the values property of the editorParams object, not as the editorParams object");
@@ -15723,8 +15727,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 			function getUniqueColumnValues(field) {
 				var output = {},
-				    data = self.table.getData(),
-				    column;
+					data = self.table.getData(),
+					column;
 
 				if (field) {
 					column = self.table.columnManager.getColumnByField(field);
@@ -15861,7 +15865,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 			function fillList() {
 				while (listEl.firstChild) {
 					listEl.removeChild(listEl.firstChild);
-				}displayItems.forEach(function (item) {
+				} displayItems.forEach(function (item) {
 
 					var el = item.element;
 
@@ -16252,18 +16256,18 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 			var _this54 = this;
 
 			var self = this,
-			    cellEl = cell.getElement(),
-			    initialValue = cell.getValue(),
-			    vertNav = editorParams.verticalNavigation || "editor",
-			    initialDisplayValue = typeof initialValue !== "undefined" || initialValue === null ? initialValue : typeof editorParams.defaultValue !== "undefined" ? editorParams.defaultValue : "",
-			    input = document.createElement("input"),
-			    listEl = document.createElement("div"),
-			    allItems = [],
-			    displayItems = [],
-			    values = [],
-			    currentItem = false,
-			    blurable = true,
-			    uniqueColumnValues = false;
+				cellEl = cell.getElement(),
+				initialValue = cell.getValue(),
+				vertNav = editorParams.verticalNavigation || "editor",
+				initialDisplayValue = typeof initialValue !== "undefined" || initialValue === null ? initialValue : typeof editorParams.defaultValue !== "undefined" ? editorParams.defaultValue : "",
+				input = document.createElement("input"),
+				listEl = document.createElement("div"),
+				allItems = [],
+				displayItems = [],
+				values = [],
+				currentItem = false,
+				blurable = true,
+				uniqueColumnValues = false;
 
 			//style input
 			input.setAttribute("type", "search");
@@ -16304,8 +16308,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 			function getUniqueColumnValues(field) {
 				var output = {},
-				    data = self.table.getData(),
-				    column;
+					data = self.table.getData(),
+					column;
 
 				if (field) {
 					column = self.table.columnManager.getColumnByField(field);
@@ -16340,9 +16344,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 			function filterList(term, intialLoad) {
 				var matches = [],
-				    values,
-				    items,
-				    searchEl;
+					values,
+					items,
+					searchEl;
 
 				//lookup base values list
 				if (uniqueColumnValues) {
@@ -16535,7 +16539,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 				if (!listEl.parentNode) {
 					while (listEl.firstChild) {
 						listEl.removeChild(listEl.firstChild);
-					}var offset = Tabulator.prototype.helpers.elOffset(cellEl);
+					} var offset = Tabulator.prototype.helpers.elOffset(cellEl);
 
 					listEl.style.minWidth = cellEl.offsetWidth + "px";
 
@@ -16702,13 +16706,13 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		//star rating
 		star: function star(cell, onRendered, success, cancel, editorParams) {
 			var self = this,
-			    element = cell.getElement(),
-			    value = cell.getValue(),
-			    maxStars = element.getElementsByTagName("svg").length || 5,
-			    size = element.getElementsByTagName("svg")[0] ? element.getElementsByTagName("svg")[0].getAttribute("width") : 14,
-			    stars = [],
-			    starsHolder = document.createElement("div"),
-			    star = document.createElementNS('http://www.w3.org/2000/svg', "svg");
+				element = cell.getElement(),
+				value = cell.getValue(),
+				maxStars = element.getElementsByTagName("svg").length || 5,
+				size = element.getElementsByTagName("svg")[0] ? element.getElementsByTagName("svg")[0].getAttribute("width") : 14,
+				stars = [],
+				starsHolder = document.createElement("div"),
+				star = document.createElementNS('http://www.w3.org/2000/svg', "svg");
 
 			//change star type
 			function starChange(val) {
@@ -16851,14 +16855,14 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		//draggable progress bar
 		progress: function progress(cell, onRendered, success, cancel, editorParams) {
 			var element = cell.getElement(),
-			    max = typeof editorParams.max === "undefined" ? element.getElementsByTagName("div")[0].getAttribute("max") || 100 : editorParams.max,
-			    min = typeof editorParams.min === "undefined" ? element.getElementsByTagName("div")[0].getAttribute("min") || 0 : editorParams.min,
-			    percent = (max - min) / 100,
-			    value = cell.getValue() || 0,
-			    handle = document.createElement("div"),
-			    bar = document.createElement("div"),
-			    mouseDrag,
-			    mouseDragWidth;
+				max = typeof editorParams.max === "undefined" ? element.getElementsByTagName("div")[0].getAttribute("max") || 100 : editorParams.max,
+				min = typeof editorParams.min === "undefined" ? element.getElementsByTagName("div")[0].getAttribute("min") || 0 : editorParams.min,
+				percent = (max - min) / 100,
+				value = cell.getValue() || 0,
+				handle = document.createElement("div"),
+				bar = document.createElement("div"),
+				mouseDrag,
+				mouseDragWidth;
 
 			//set new value
 			function updateValue() {
@@ -16982,10 +16986,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		//checkbox
 		tickCross: function tickCross(cell, onRendered, success, cancel, editorParams) {
 			var value = cell.getValue(),
-			    input = document.createElement("input"),
-			    tristate = editorParams.tristate,
-			    indetermValue = typeof editorParams.indeterminateValue === "undefined" ? null : editorParams.indeterminateValue,
-			    indetermState = false;
+				input = document.createElement("input"),
+				tristate = editorParams.tristate,
+				indetermValue = typeof editorParams.indeterminateValue === "undefined" ? null : editorParams.indeterminateValue,
+				indetermState = false;
 
 			input.setAttribute("type", "checkbox");
 			input.style.marginTop = "5px";
@@ -17173,8 +17177,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		var _this57 = this;
 
 		var subGroups = column.columns,
-		    maxDepth = 0,
-		    title = column.definition["title" + (this.colVisProp.charAt(0).toUpperCase() + this.colVisProp.slice(1))] || column.definition.title;
+			maxDepth = 0,
+			title = column.definition["title" + (this.colVisProp.charAt(0).toUpperCase() + this.colVisProp.slice(1))] || column.definition.title;
 
 		var groupData = {
 			title: title,
@@ -17221,8 +17225,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	Export.prototype.headersToExportRows = function (columns) {
 		var headers = [],
-		    headerDepth = 0,
-		    exportRows = [];
+			headerDepth = 0,
+			exportRows = [];
 
 		function parseColumnGroup(column, level) {
 
@@ -17361,11 +17365,11 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		var _this59 = this;
 
 		var table = document.createElement("table"),
-		    headerEl = document.createElement("thead"),
-		    bodyEl = document.createElement("tbody"),
-		    styles = this.lookupTableStyles(),
-		    rowFormatter = this.table.options["rowFormatter" + (this.colVisProp.charAt(0).toUpperCase() + this.colVisProp.slice(1))],
-		    setup = {};
+			headerEl = document.createElement("thead"),
+			bodyEl = document.createElement("tbody"),
+			styles = this.lookupTableStyles(),
+			rowFormatter = this.table.options["rowFormatter" + (this.colVisProp.charAt(0).toUpperCase() + this.colVisProp.slice(1))],
+			setup = {};
 
 		setup.rowFormatter = rowFormatter !== null ? rowFormatter : this.table.options.rowFormatter;
 
@@ -17489,8 +17493,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	Export.prototype.genereateGroupElement = function (row, setup, styles) {
 
 		var rowEl = document.createElement("tr"),
-		    cellEl = document.createElement("td"),
-		    group = row.columns[0];
+			cellEl = document.createElement("td"),
+			group = row.columns[0];
 
 		rowEl.classList.add("tabulator-print-table-row");
 
@@ -17542,8 +17546,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 			if (col) {
 				var cellEl = document.createElement("td"),
-				    column = col.component._column,
-				    value = col.value;
+					column = col.component._column,
+					value = col.value;
 
 				var cellWrapper = {
 					modules: {},
@@ -17699,15 +17703,15 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	//initialize column header filter
 	Filter.prototype.initializeColumn = function (column, value) {
 		var self = this,
-		    field = column.getField(),
-		    params;
+			field = column.getField(),
+			params;
 
 		//handle successfull value change
 		function success(value) {
 			var filterType = column.modules.filter.tagType == "input" && column.modules.filter.attrType == "text" || column.modules.filter.tagType == "textarea" ? "partial" : "match",
-			    type = "",
-			    filterChangeCheck = "",
-			    filterFunc;
+				type = "",
+				filterChangeCheck = "",
+				filterFunc;
 
 			if (typeof column.modules.filter.prevSuccess === "undefined" || column.modules.filter.prevSuccess !== value) {
 
@@ -17802,18 +17806,18 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		var _this62 = this;
 
 		var self = this,
-		    success = column.modules.filter.success,
-		    field = column.getField(),
-		    filterElement,
-		    editor,
-		    editorElement,
-		    cellWrapper,
-		    typingTimer,
-		    searchTrigger,
-		    params;
+			success = column.modules.filter.success,
+			field = column.getField(),
+			filterElement,
+			editor,
+			editorElement,
+			cellWrapper,
+			typingTimer,
+			searchTrigger,
+			params;
 
 		//handle aborted edit
-		function cancel() {}
+		function cancel() { }
 
 		if (column.modules.filter.headerElement && column.modules.filter.headerElement.parentNode) {
 			column.contentElement.removeChild(column.modules.filter.headerElement.parentNode);
@@ -17885,7 +17889,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 					},
 					getRow: function getRow() {
 						return {
-							normalizeHeight: function normalizeHeight() {}
+							normalizeHeight: function normalizeHeight() { }
 						};
 					}
 				};
@@ -17894,7 +17898,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 				params = typeof params === "function" ? params.call(self.table) : params;
 
-				editorElement = editor.call(this.table.modules.edit, cellWrapper, function () {}, success, cancel, params);
+				editorElement = editor.call(this.table.modules.edit, cellWrapper, function () { }, success, cancel, params);
 
 				if (!editorElement) {
 					console.warn("Filter Error - Cannot add filter to " + field + " column, editor returned a value of false");
@@ -18094,7 +18098,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	Filter.prototype.findFilter = function (filter) {
 		var self = this,
-		    column;
+			column;
 
 		if (Array.isArray(filter)) {
 			return this.findSubFilters(filter);
@@ -18133,7 +18137,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	Filter.prototype.findSubFilters = function (filters) {
 		var self = this,
-		    output = [];
+			output = [];
 
 		filters.forEach(function (filter) {
 			filter = self.findFilter(filter);
@@ -18197,7 +18201,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	//get all filters
 	Filter.prototype.getHeaderFilters = function () {
 		var self = this,
-		    output = [];
+			output = [];
 
 		for (var key in this.headerFilters) {
 			output.push({ field: key, type: this.headerFilters[key].type, value: this.headerFilters[key].value });
@@ -18274,8 +18278,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	//search data and return matching rows
 	Filter.prototype.search = function (searchType, field, type, value) {
 		var self = this,
-		    activeRows = [],
-		    filterList = [];
+			activeRows = [],
+			filterList = [];
 
 		if (!Array.isArray(field)) {
 			field = [{ field: field, type: type, value: value }];
@@ -18309,8 +18313,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	//filter row array
 	Filter.prototype.filter = function (rowList, filters) {
 		var self = this,
-		    activeRows = [],
-		    activeRowComponents = [];
+			activeRows = [],
+			activeRowComponents = [];
 
 		if (self.table.options.dataFiltering) {
 			self.table.options.dataFiltering.call(self.table, self.getFilters());
@@ -18342,8 +18346,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	//filter individual row
 	Filter.prototype.filterRow = function (row, filters) {
 		var self = this,
-		    match = true,
-		    data = row.getData();
+			match = true,
+			data = row.getData();
 
 		self.filterList.forEach(function (filter) {
 			if (!self.filterRecurse(filter, data)) {
@@ -18362,7 +18366,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	Filter.prototype.filterRecurse = function (filter, data) {
 		var self = this,
-		    match = false;
+			match = false;
 
 		if (Array.isArray(filter)) {
 			filter.forEach(function (subFilter) {
@@ -18435,8 +18439,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		//contains the keywords
 		"keywords": function keywords(filterVal, rowVal, rowData, filterParams) {
 			var keywords = filterVal.toLowerCase().split(typeof filterParams.separator === "undefined" ? " " : filterParams.separator),
-			    value = String(rowVal === null || typeof rowVal === "undefined" ? "" : rowVal).toLowerCase(),
-			    matches = [];
+				value = String(rowVal === null || typeof rowVal === "undefined" ? "" : rowVal).toLowerCase(),
+				matches = [];
 
 			keywords.forEach(function (keyword) {
 				if (value.includes(keyword)) {
@@ -18509,7 +18513,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	Format.prototype.lookupFormatter = function (column, type) {
 		var config = { params: column.definition["formatter" + type + "Params"] || {} },
-		    formatter = column.definition["formatter" + type];
+			formatter = column.definition["formatter" + type];
 
 		//set column formatter
 		switch (typeof formatter === 'undefined' ? 'undefined' : _typeof(formatter)) {
@@ -18555,7 +18559,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	//return a formatted value for a cell
 	Format.prototype.formatValue = function (cell) {
 		var component = cell.getComponent(),
-		    params = typeof cell.column.modules.format.params === "function" ? cell.column.modules.format.params(component) : cell.column.modules.format.params;
+			params = typeof cell.column.modules.format.params === "function" ? cell.column.modules.format.params(component) : cell.column.modules.format.params;
 
 		function onRendered(callback) {
 			if (!cell.modules.format) {
@@ -18571,7 +18575,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	Format.prototype.formatExportValue = function (cell, type) {
 		var formatter = cell.column.modules.format[type],
-		    params;
+			params;
 
 		if (formatter) {
 			var onRendered = function onRendered(callback) {
@@ -18663,10 +18667,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		//currency formatting
 		money: function money(cell, formatterParams, onRendered) {
 			var floatVal = parseFloat(cell.getValue()),
-			    number,
-			    integer,
-			    decimal,
-			    rgx;
+				number,
+				integer,
+				decimal,
+				rgx;
 
 			var decimalSym = formatterParams.decimal || ".";
 			var thousandSym = formatterParams.thousand || ",";
@@ -18696,11 +18700,11 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		//clickable anchor tag
 		link: function link(cell, formatterParams, onRendered) {
 			var value = cell.getValue(),
-			    urlPrefix = formatterParams.urlPrefix || "",
-			    download = formatterParams.download,
-			    label = value,
-			    el = document.createElement("a"),
-			    data;
+				urlPrefix = formatterParams.urlPrefix || "",
+				download = formatterParams.download,
+				label = value,
+				el = document.createElement("a"),
+				data;
 
 			if (formatterParams.labelField) {
 				data = cell.getData();
@@ -18797,11 +18801,11 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		//tick or cross
 		tickCross: function tickCross(cell, formatterParams, onRendered) {
 			var value = cell.getValue(),
-			    element = cell.getElement(),
-			    empty = formatterParams.allowEmpty,
-			    truthy = formatterParams.allowTruthy,
-			    tick = typeof formatterParams.tickElement !== "undefined" ? formatterParams.tickElement : '<svg enable-background="new 0 0 24 24" height="14" width="14" viewBox="0 0 24 24" xml:space="preserve" ><path fill="#2DC214" clip-rule="evenodd" d="M21.652,3.211c-0.293-0.295-0.77-0.295-1.061,0L9.41,14.34  c-0.293,0.297-0.771,0.297-1.062,0L3.449,9.351C3.304,9.203,3.114,9.13,2.923,9.129C2.73,9.128,2.534,9.201,2.387,9.351  l-2.165,1.946C0.078,11.445,0,11.63,0,11.823c0,0.194,0.078,0.397,0.223,0.544l4.94,5.184c0.292,0.296,0.771,0.776,1.062,1.07  l2.124,2.141c0.292,0.293,0.769,0.293,1.062,0l14.366-14.34c0.293-0.294,0.293-0.777,0-1.071L21.652,3.211z" fill-rule="evenodd"/></svg>',
-			    cross = typeof formatterParams.crossElement !== "undefined" ? formatterParams.crossElement : '<svg enable-background="new 0 0 24 24" height="14" width="14"  viewBox="0 0 24 24" xml:space="preserve" ><path fill="#CE1515" d="M22.245,4.015c0.313,0.313,0.313,0.826,0,1.139l-6.276,6.27c-0.313,0.312-0.313,0.826,0,1.14l6.273,6.272  c0.313,0.313,0.313,0.826,0,1.14l-2.285,2.277c-0.314,0.312-0.828,0.312-1.142,0l-6.271-6.271c-0.313-0.313-0.828-0.313-1.141,0  l-6.276,6.267c-0.313,0.313-0.828,0.313-1.141,0l-2.282-2.28c-0.313-0.313-0.313-0.826,0-1.14l6.278-6.269  c0.313-0.312,0.313-0.826,0-1.14L1.709,5.147c-0.314-0.313-0.314-0.827,0-1.14l2.284-2.278C4.308,1.417,4.821,1.417,5.135,1.73  L11.405,8c0.314,0.314,0.828,0.314,1.141,0.001l6.276-6.267c0.312-0.312,0.826-0.312,1.141,0L22.245,4.015z"/></svg>';
+				element = cell.getElement(),
+				empty = formatterParams.allowEmpty,
+				truthy = formatterParams.allowTruthy,
+				tick = typeof formatterParams.tickElement !== "undefined" ? formatterParams.tickElement : '<svg enable-background="new 0 0 24 24" height="14" width="14" viewBox="0 0 24 24" xml:space="preserve" ><path fill="#2DC214" clip-rule="evenodd" d="M21.652,3.211c-0.293-0.295-0.77-0.295-1.061,0L9.41,14.34  c-0.293,0.297-0.771,0.297-1.062,0L3.449,9.351C3.304,9.203,3.114,9.13,2.923,9.129C2.73,9.128,2.534,9.201,2.387,9.351  l-2.165,1.946C0.078,11.445,0,11.63,0,11.823c0,0.194,0.078,0.397,0.223,0.544l4.94,5.184c0.292,0.296,0.771,0.776,1.062,1.07  l2.124,2.141c0.292,0.293,0.769,0.293,1.062,0l14.366-14.34c0.293-0.294,0.293-0.777,0-1.071L21.652,3.211z" fill-rule="evenodd"/></svg>',
+				cross = typeof formatterParams.crossElement !== "undefined" ? formatterParams.crossElement : '<svg enable-background="new 0 0 24 24" height="14" width="14"  viewBox="0 0 24 24" xml:space="preserve" ><path fill="#CE1515" d="M22.245,4.015c0.313,0.313,0.313,0.826,0,1.139l-6.276,6.27c-0.313,0.312-0.313,0.826,0,1.14l6.273,6.272  c0.313,0.313,0.313,0.826,0,1.14l-2.285,2.277c-0.314,0.312-0.828,0.312-1.142,0l-6.271-6.271c-0.313-0.313-0.828-0.313-1.141,0  l-6.276,6.267c-0.313,0.313-0.828,0.313-1.141,0l-2.282-2.28c-0.313-0.313-0.313-0.826,0-1.14l6.278-6.269  c0.313-0.312,0.313-0.826,0-1.14L1.709,5.147c-0.314-0.313-0.314-0.827,0-1.14l2.284-2.278C4.308,1.417,4.821,1.417,5.135,1.73  L11.405,8c0.314,0.314,0.828,0.314,1.141,0.001l6.276-6.267c0.312-0.312,0.826-0.312,1.141,0L22.245,4.015z"/></svg>';
 
 			if (truthy && value || value === true || value === "true" || value === "True" || value === 1 || value === "1") {
 				element.setAttribute("aria-checked", true);
@@ -18883,12 +18887,12 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		//star rating
 		star: function star(cell, formatterParams, onRendered) {
 			var value = cell.getValue(),
-			    element = cell.getElement(),
-			    maxStars = formatterParams && formatterParams.stars ? formatterParams.stars : 5,
-			    stars = document.createElement("span"),
-			    star = document.createElementNS('http://www.w3.org/2000/svg', "svg"),
-			    starActive = '<polygon fill="#FFEA00" stroke="#C1AB60" stroke-width="37.6152" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="259.216,29.942 330.27,173.919 489.16,197.007 374.185,309.08 401.33,467.31 259.216,392.612 117.104,467.31 144.25,309.08 29.274,197.007 188.165,173.919 "/>',
-			    starInactive = '<polygon fill="#D2D2D2" stroke="#686868" stroke-width="37.6152" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="259.216,29.942 330.27,173.919 489.16,197.007 374.185,309.08 401.33,467.31 259.216,392.612 117.104,467.31 144.25,309.08 29.274,197.007 188.165,173.919 "/>';
+				element = cell.getElement(),
+				maxStars = formatterParams && formatterParams.stars ? formatterParams.stars : 5,
+				stars = document.createElement("span"),
+				star = document.createElementNS('http://www.w3.org/2000/svg', "svg"),
+				starActive = '<polygon fill="#FFEA00" stroke="#C1AB60" stroke-width="37.6152" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="259.216,29.942 330.27,173.919 489.16,197.007 374.185,309.08 401.33,467.31 259.216,392.612 117.104,467.31 144.25,309.08 29.274,197.007 188.165,173.919 "/>',
+				starInactive = '<polygon fill="#D2D2D2" stroke="#686868" stroke-width="37.6152" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="259.216,29.942 330.27,173.919 489.16,197.007 374.185,309.08 401.33,467.31 259.216,392.612 117.104,467.31 144.25,309.08 29.274,197.007 188.165,173.919 "/>';
 
 			//style stars holder
 			stars.style.verticalAlign = "middle";
@@ -18922,13 +18926,13 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 		traffic: function traffic(cell, formatterParams, onRendered) {
 			var value = this.sanitizeHTML(cell.getValue()) || 0,
-			    el = document.createElement("span"),
-			    max = formatterParams && formatterParams.max ? formatterParams.max : 100,
-			    min = formatterParams && formatterParams.min ? formatterParams.min : 0,
-			    colors = formatterParams && typeof formatterParams.color !== "undefined" ? formatterParams.color : ["red", "orange", "green"],
-			    color = "#666666",
-			    percent,
-			    percentValue;
+				el = document.createElement("span"),
+				max = formatterParams && formatterParams.max ? formatterParams.max : 100,
+				min = formatterParams && formatterParams.min ? formatterParams.min : 0,
+				colors = formatterParams && typeof formatterParams.color !== "undefined" ? formatterParams.color : ["red", "orange", "green"],
+				color = "#666666",
+				percent,
+				percentValue;
 
 			if (isNaN(value) || typeof cell.getValue() === "undefined") {
 				return;
@@ -18973,19 +18977,19 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		progress: function progress(cell, formatterParams, onRendered) {
 			//progress bar
 			var value = this.sanitizeHTML(cell.getValue()) || 0,
-			    element = cell.getElement(),
-			    max = formatterParams && formatterParams.max ? formatterParams.max : 100,
-			    min = formatterParams && formatterParams.min ? formatterParams.min : 0,
-			    legendAlign = formatterParams && formatterParams.legendAlign ? formatterParams.legendAlign : "center",
-			    percent,
-			    percentValue,
-			    color,
-			    legend,
-			    legendColor,
-			    top,
-			    left,
-			    right,
-			    bottom;
+				element = cell.getElement(),
+				max = formatterParams && formatterParams.max ? formatterParams.max : 100,
+				min = formatterParams && formatterParams.min ? formatterParams.min : 0,
+				legendAlign = formatterParams && formatterParams.legendAlign ? formatterParams.legendAlign : "center",
+				percent,
+				percentValue,
+				color,
+				legend,
+				legendColor,
+				top,
+				left,
+				right,
+				bottom;
 
 			//make sure value is in range
 			percentValue = parseFloat(value) <= max ? parseFloat(value) : max;
@@ -19135,9 +19139,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 		responsiveCollapse: function responsiveCollapse(cell, formatterParams, onRendered) {
 			var self = this,
-			    open = false,
-			    el = document.createElement("div"),
-			    config = cell.getRow()._row.modules.responsiveLayout;
+				open = false,
+				el = document.createElement("div"),
+				config = cell.getRow()._row.modules.responsiveLayout;
 
 			el.classList.add("tabulator-responsive-collapse-toggle");
 			el.innerHTML = "<span class='tabulator-responsive-collapse-toggle-open'>+</span><span class='tabulator-responsive-collapse-toggle-close'>-</span>";
@@ -19405,7 +19409,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	//layout columns appropropriatly
 	FrozenColumns.prototype.layout = function () {
 		var self = this,
-		    rightMargin = 0;
+			rightMargin = 0;
 
 		if (self.active) {
 
@@ -19520,8 +19524,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	//filter frozen rows out of display data
 	FrozenRows.prototype.getRows = function (rows) {
 		var self = this,
-		    frozen = [],
-		    output = rows.slice(0);
+			frozen = [],
+			output = rows.slice(0);
 
 		this.rows.forEach(function (row) {
 			var index = output.indexOf(row);
@@ -19736,10 +19740,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	Group.prototype.addBindings = function () {
 		var self = this,
-		    dblTap,
-		    tapHold,
-		    tap,
-		    toggleElement;
+			dblTap,
+			tapHold,
+			tap,
+			toggleElement;
 
 		//handle group click events
 		if (self.groupManager.table.options.groupClick) {
@@ -19848,7 +19852,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 		if (this.hasSubGroups) {
 			var groupID = this.groupManager.groupIDLookups[level].func(row.getData()),
-			    groupKey = level + "_" + groupID;
+				groupKey = level + "_" + groupID;
 
 			if (this.groupManager.allowedValues && this.groupManager.allowedValues[level]) {
 				if (this.groups[groupKey]) {
@@ -19909,7 +19913,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		});
 	};
 
-	Group.prototype.getRowIndex = function (row) {};
+	Group.prototype.getRowIndex = function (row) { };
 
 	//update row data to match grouping contraints
 	Group.prototype.conformRowData = function (data) {
@@ -19958,7 +19962,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	Group.prototype.removeGroup = function (group) {
 		var groupKey = group.level + "_" + group.key,
-		    index;
+			index;
 
 		if (this.groups[groupKey]) {
 			delete this.groups[groupKey];
@@ -20051,7 +20055,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	Group.prototype.getData = function (visible, transform) {
 		var self = this,
-		    output = [];
+			output = [];
 
 		this._visSet();
 
@@ -20230,7 +20234,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 		while (this.element.firstChild) {
 			this.element.removeChild(this.element.firstChild);
-		}if (typeof this.elementContents === "string") {
+		} if (typeof this.elementContents === "string") {
 			this.element.innerHTML = this.elementContents;
 		} else {
 			this.element.appendChild(this.elementContents);
@@ -20315,10 +20319,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		return this;
 	};
 
-	Group.prototype.reinitializeHeight = function () {};
-	Group.prototype.calcHeight = function () {};
-	Group.prototype.setCellHeight = function () {};
-	Group.prototype.clearCellHeight = function () {};
+	Group.prototype.reinitializeHeight = function () { };
+	Group.prototype.calcHeight = function () { };
+	Group.prototype.setCellHeight = function () { };
+	Group.prototype.clearCellHeight = function () { };
 
 	//////////////// Object Generation /////////////////
 	Group.prototype.getComponent = function () {
@@ -20353,9 +20357,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	//initialize group configuration
 	GroupRows.prototype.initialize = function () {
 		var self = this,
-		    groupBy = self.table.options.groupBy,
-		    startOpen = self.table.options.groupStartOpen,
-		    groupHeader = self.table.options.groupHeader;
+			groupBy = self.table.options.groupBy,
+			startOpen = self.table.options.groupStartOpen,
+			groupHeader = self.table.options.groupHeader;
 
 		this.allowedValues = self.table.options.groupValues;
 
@@ -20575,7 +20579,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	GroupRows.prototype.generateGroups = function (rows) {
 		var self = this,
-		    oldGroups = self.groups;
+			oldGroups = self.groups;
 
 		self.groups = {};
 		self.groupList = [];
@@ -20597,7 +20601,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	GroupRows.prototype.createGroup = function (groupID, level, oldGroups) {
 		var groupKey = level + "_" + groupID,
-		    group;
+			group;
 
 		oldGroups = oldGroups || [];
 
@@ -20620,7 +20624,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	GroupRows.prototype.assignRowToExistingGroup = function (row, oldGroups) {
 		var groupID = this.groupIDLookups[0].func(row.getData()),
-		    groupKey = "0_" + groupID;
+			groupKey = "0_" + groupID;
 
 		if (this.groups[groupKey]) {
 			this.groups[groupKey].addRow(row);
@@ -20629,7 +20633,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	GroupRows.prototype.assignRowToGroup = function (row, oldGroups) {
 		var groupID = this.groupIDLookups[0].func(row.getData()),
-		    newGroupNeeded = !this.groups["0_" + groupID];
+			newGroupNeeded = !this.groups["0_" + groupID];
 
 		if (newGroupNeeded) {
 			this.createGroup(groupID, 0, oldGroups);
@@ -20642,9 +20646,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	GroupRows.prototype.reassignRowToGroup = function (row) {
 		var oldRowGroup = row.getGroup(),
-		    oldGroupPath = oldRowGroup.getPath(),
-		    newGroupPath = this.getExpectedPath(row),
-		    samePath = true;
+			oldGroupPath = oldRowGroup.getPath(),
+			newGroupPath = this.getExpectedPath(row),
+			samePath = true;
 		// figure out if new group path is the same as old group path
 		var samePath = oldGroupPath.length == newGroupPath.length && oldGroupPath.every(function (element, index) {
 			return element === newGroupPath[index];
@@ -20659,7 +20663,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	GroupRows.prototype.getExpectedPath = function (row) {
 		var groupPath = [],
-		    rowData = row.getData();
+			rowData = row.getData();
 		this.groupIDLookups.forEach(function (groupId) {
 			groupPath.push(groupId.func(rowData));
 		});
@@ -20668,8 +20672,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	GroupRows.prototype.updateGroupRows = function (force) {
 		var self = this,
-		    output = [],
-		    oldRowCount;
+			output = [],
+			oldRowCount;
 
 		self.groupList.forEach(function (group) {
 			output = output.concat(group.getHeadersAndRows());
@@ -20704,7 +20708,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	GroupRows.prototype.removeGroup = function (group) {
 		var groupKey = group.level + "_" + group.key,
-		    index;
+			index;
 
 		if (this.groups[groupKey]) {
 			delete this.groups[groupKey];
@@ -20880,13 +20884,13 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	HtmlTableImport.prototype.parseTable = function () {
 		var self = this,
-		    element = self.table.element,
-		    options = self.table.options,
-		    columns = options.columns,
-		    headers = element.getElementsByTagName("th"),
-		    rows = element.getElementsByTagName("tbody")[0],
-		    data = [],
-		    newTable;
+			element = self.table.element,
+			options = self.table.options,
+			columns = options.columns,
+			headers = element.getElementsByTagName("th"),
+			rows = element.getElementsByTagName("tbody")[0],
+			data = [],
+			newTable;
 
 		self.hasIndex = false;
 
@@ -20906,8 +20910,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		//iterate through table rows and build data set
 		for (var index = 0; index < rows.length; index++) {
 			var row = rows[index],
-			    cells = row.getElementsByTagName("td"),
-			    item = {};
+				cells = row.getElementsByTagName("td"),
+				item = {};
 
 			//create index if the dont exist in table
 			if (!self.hasIndex) {
@@ -21001,10 +21005,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	HtmlTableImport.prototype._extractHeaders = function (headers, rows) {
 		for (var index = 0; index < headers.length; index++) {
 			var header = headers[index],
-			    exists = false,
-			    col = this._findCol(header.textContent),
-			    width,
-			    attributes;
+				exists = false,
+				col = this._findCol(header.textContent),
+				width,
+				attributes;
 
 			if (col) {
 				exists = true;
@@ -21044,7 +21048,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	HtmlTableImport.prototype._generateBlankHeaders = function (headers, rows) {
 		for (var index = 0; index < headers.length; index++) {
 			var header = headers[index],
-			    col = { title: "", field: "col" + index };
+				col = { title: "", field: "col" + index };
 
 			this.fieldIndex[index] = col.field;
 
@@ -21069,7 +21073,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	Keybindings.prototype.initialize = function () {
 		var bindings = this.table.options.keybindings,
-		    mergedBindings = {};
+			mergedBindings = {};
 
 		this.watchKeys = {};
 		this.pressedKeys = [];
@@ -21209,7 +21213,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	Keybindings.prototype.checkBinding = function (e, binding) {
 		var self = this,
-		    match = true;
+			match = true;
 
 		if (e.ctrlKey == binding.ctrl && e.shiftKey == binding.shift && e.metaKey == binding.meta) {
 			binding.keys.forEach(function (key) {
@@ -21253,8 +21257,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		},
 		scrollPageUp: function scrollPageUp(e) {
 			var rowManager = this.table.rowManager,
-			    newPos = rowManager.scrollTop - rowManager.height,
-			    scrollMax = rowManager.element.scrollHeight;
+				newPos = rowManager.scrollTop - rowManager.height,
+				scrollMax = rowManager.element.scrollHeight;
 
 			e.preventDefault();
 
@@ -21270,8 +21274,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		},
 		scrollPageDown: function scrollPageDown(e) {
 			var rowManager = this.table.rowManager,
-			    newPos = rowManager.scrollTop + rowManager.height,
-			    scrollMax = rowManager.element.scrollHeight;
+				newPos = rowManager.scrollTop + rowManager.height,
+				scrollMax = rowManager.element.scrollHeight;
 
 			e.preventDefault();
 
@@ -21501,8 +21505,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		var _this72 = this;
 
 		var element = component.getElement(),
-		    tapHold = null,
-		    loaded = false;
+			tapHold = null,
+			loaded = false;
 
 		element.addEventListener("touchstart", function (e) {
 			clearTimeout(tapHold);
@@ -21564,7 +21568,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		var _this73 = this;
 
 		var docHeight = Math.max(document.body.offsetHeight, window.innerHeight),
-		    touch = !(e instanceof MouseEvent);
+			touch = !(e instanceof MouseEvent);
 
 		if (!touch) {
 			e.preventDefault();
@@ -21716,8 +21720,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	MoveColumns.prototype.initializeColumn = function (column) {
 		var self = this,
-		    config = {},
-		    colEl;
+			config = {},
+			colEl;
 
 		if (!column.modules.frozen) {
 
@@ -21764,17 +21768,17 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	MoveColumns.prototype.bindTouchEvents = function (column) {
 		var self = this,
-		    colEl = column.getElement(),
-		    startXMove = false,
-		    //shifting center position of the cell
-		dir = false,
-		    currentCol,
-		    nextCol,
-		    prevCol,
-		    nextColWidth,
-		    prevColWidth,
-		    nextColWidthLast,
-		    prevColWidthLast;
+			colEl = column.getElement(),
+			startXMove = false,
+			//shifting center position of the cell
+			dir = false,
+			currentCol,
+			nextCol,
+			prevCol,
+			nextColWidth,
+			prevColWidth,
+			nextColWidthLast,
+			prevColWidthLast;
 
 		colEl.addEventListener("touchstart", function (e) {
 			self.checkTimeout = setTimeout(function () {
@@ -21944,10 +21948,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	MoveColumns.prototype.moveHover = function (e) {
 		var self = this,
-		    columnHolder = self.table.columnManager.getElement(),
-		    scrollLeft = columnHolder.scrollLeft,
-		    xPos = (self.touchMove ? e.touches[0].pageX : e.pageX) - Tabulator.prototype.helpers.elOffset(columnHolder).left + scrollLeft,
-		    scrollPos;
+			columnHolder = self.table.columnManager.getElement(),
+			scrollLeft = columnHolder.scrollLeft,
+			xPos = (self.touchMove ? e.touches[0].pageX : e.pageX) - Tabulator.prototype.helpers.elOffset(columnHolder).left + scrollLeft,
+			scrollPos;
 
 		self.hoverElement.style.left = xPos - self.startX + "px";
 
@@ -22026,8 +22030,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	MoveRows.prototype.initializeGroupHeader = function (group) {
 		var self = this,
-		    config = {},
-		    rowEl;
+			config = {},
+			rowEl;
 
 		//inter table drag drop
 		config.mouseup = function (e) {
@@ -22058,8 +22062,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	MoveRows.prototype.initializeRow = function (row) {
 		var self = this,
-		    config = {},
-		    rowEl;
+			config = {},
+			rowEl;
 
 		//inter table drag drop
 		config.mouseup = function (e) {
@@ -22111,7 +22115,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	MoveRows.prototype.initializeCell = function (cell) {
 		var self = this,
-		    cellEl = cell.getElement();
+			cellEl = cell.getElement();
 
 		cellEl.addEventListener("mousedown", function (e) {
 			if (e.which === 1) {
@@ -22134,16 +22138,16 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	MoveRows.prototype.bindTouchEvents = function (row, element) {
 		var self = this,
-		    startYMove = false,
-		    //shifting center position of the cell
-		dir = false,
-		    currentRow,
-		    nextRow,
-		    prevRow,
-		    nextRowHeight,
-		    prevRowHeight,
-		    nextRowHeightLast,
-		    prevRowHeightLast;
+			startYMove = false,
+			//shifting center position of the cell
+			dir = false,
+			currentRow,
+			nextRow,
+			prevRow,
+			nextRowHeight,
+			prevRowHeight,
+			nextRowHeightLast,
+			prevRowHeightLast;
 
 		element.addEventListener("touchstart", function (e) {
 			self.checkTimeout = setTimeout(function () {
@@ -22291,9 +22295,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	MoveRows.prototype.setStartPosition = function (e, row) {
 		var pageX = this.touchMove ? e.touches[0].pageX : e.pageX,
-		    pageY = this.touchMove ? e.touches[0].pageY : e.pageY,
-		    element,
-		    position;
+			pageY = this.touchMove ? e.touches[0].pageY : e.pageY,
+			element,
+			position;
 
 		element = row.getElement();
 		if (this.connection) {
@@ -22352,9 +22356,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	MoveRows.prototype.moveHoverTable = function (e) {
 		var rowHolder = this.table.rowManager.getElement(),
-		    scrollTop = rowHolder.scrollTop,
-		    yPos = (this.touchMove ? e.touches[0].pageY : e.pageY) - rowHolder.getBoundingClientRect().top + scrollTop,
-		    scrollPos;
+			scrollTop = rowHolder.scrollTop,
+			yPos = (this.touchMove ? e.touches[0].pageY : e.pageY) - rowHolder.getBoundingClientRect().top + scrollTop,
+			scrollPos;
 
 		this.hoverElement.style.top = yPos - this.startY + "px";
 	};
@@ -22518,7 +22522,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	MoveRows.prototype.tableRowDrop = function (e, row) {
 		var receiver = false,
-		    success = false;
+			success = false;
 
 		console.trace("drop");
 
@@ -22615,12 +22619,12 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	//initialize column mutator
 	Mutator.prototype.initializeColumn = function (column) {
 		var self = this,
-		    match = false,
-		    config = {};
+			match = false,
+			config = {};
 
 		this.allowedTypes.forEach(function (type) {
 			var key = "mutator" + (type.charAt(0).toUpperCase() + type.slice(1)),
-			    mutator;
+				mutator;
 
 			if (column.definition[key]) {
 				mutator = self.lookupMutator(column.definition[key]);
@@ -22665,8 +22669,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	//apply mutator to row
 	Mutator.prototype.transformRow = function (data, type, updatedData) {
 		var self = this,
-		    key = "mutator" + (type.charAt(0).toUpperCase() + type.slice(1)),
-		    value;
+			key = "mutator" + (type.charAt(0).toUpperCase() + type.slice(1)),
+			value;
 
 		if (this.enabled) {
 
@@ -22695,7 +22699,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	//apply mutator to new cell value
 	Mutator.prototype.transformCell = function (cell, value) {
 		var mutator = cell.column.modules.mutate.mutatorEdit || cell.column.modules.mutate.mutator || false,
-		    tempData = {};
+			tempData = {};
 
 		if (mutator) {
 			tempData = Object.assign(tempData, cell.row.getData());
@@ -22808,7 +22812,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 			while (this.pageSizeSelect.firstChild) {
 				this.pageSizeSelect.removeChild(this.pageSizeSelect.firstChild);
-			}pageSizes.forEach(function (item) {
+			} pageSizes.forEach(function (item) {
 				var itemEl = document.createElement("option");
 				itemEl.value = item;
 
@@ -22830,9 +22834,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	//setup pageination
 	Page.prototype.initialize = function (hidden) {
 		var self = this,
-		    pageSelectLabel,
-		    testElRow,
-		    testElCell;
+			pageSelectLabel,
+			testElRow,
+			testElCell;
 
 		//update param names
 		this.dataSentNames = Object.assign({}, this.paginationDataSentNames);
@@ -22882,19 +22886,19 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 		//click bindings
 		self.firstBut.addEventListener("click", function () {
-			self.setPage(1).then(function () {}).catch(function () {});
+			self.setPage(1).then(function () { }).catch(function () { });
 		});
 
 		self.prevBut.addEventListener("click", function () {
-			self.previousPage().then(function () {}).catch(function () {});
+			self.previousPage().then(function () { }).catch(function () { });
 		});
 
 		self.nextBut.addEventListener("click", function () {
-			self.nextPage().then(function () {}).catch(function () {});
+			self.nextPage().then(function () { }).catch(function () { });
 		});
 
 		self.lastBut.addEventListener("click", function () {
-			self.setPage(self.max).then(function () {}).catch(function () {});
+			self.setPage(self.max).then(function () { }).catch(function () { });
 		});
 
 		if (self.table.options.paginationElement) {
@@ -22915,7 +22919,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 			self.pageSizeSelect.addEventListener("change", function (e) {
 				self.setPageSize(self.pageSizeSelect.value == "true" ? true : self.pageSizeSelect.value);
-				self.setPage(1).then(function () {}).catch(function () {});
+				self.setPage(1).then(function () { }).catch(function () { });
 			});
 		}
 
@@ -23111,7 +23115,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 		while (self.pagesElement.firstChild) {
 			self.pagesElement.removeChild(self.pagesElement.firstChild);
-		}if (self.page == 1) {
+		} if (self.page == 1) {
 			self.firstBut.disabled = true;
 			self.prevBut.disabled = true;
 		} else {
@@ -23138,7 +23142,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	Page.prototype._generatePageButton = function (page) {
 		var self = this,
-		    button = document.createElement("button");
+			button = document.createElement("button");
 
 		button.classList.add("tabulator-page");
 		if (page == self.page) {
@@ -23157,7 +23161,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		button.textContent = page;
 
 		button.addEventListener("click", function (e) {
-			self.setPage(page).then(function () {}).catch(function () {});
+			self.setPage(page).then(function () { }).catch(function () { });
 		});
 
 		return button;
@@ -23301,8 +23305,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		var _this81 = this;
 
 		var self = this,
-		    oldParams,
-		    pageParams;
+			oldParams,
+			pageParams;
 
 		return new Promise(function (resolve, reject) {
 
@@ -23354,9 +23358,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	Page.prototype._parseRemoteData = function (data) {
 		var self = this,
-		    left,
-		    data,
-		    margin;
+			left,
+			data,
+			margin;
 
 		if (typeof data[this.dataReceivedNames.last_page] === "undefined") {
 			console.warn("Remote Pagination Error - Server response missing '" + this.dataReceivedNames.last_page + "' property");
@@ -23377,7 +23381,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 						if (this.page < this.max) {
 							setTimeout(function () {
-								self.nextPage().then(function () {}).catch(function () {});
+								self.nextPage().then(function () { }).catch(function () { });
 							}, self.table.options.ajaxProgressiveLoadDelay);
 						}
 						break;
@@ -23390,7 +23394,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 						margin = this.table.options.ajaxProgressiveLoadScrollMargin || this.table.rowManager.element.clientHeight * 2;
 
 						if (self.table.rowManager.element.scrollHeight <= self.table.rowManager.element.clientHeight + margin) {
-							self.nextPage().then(function () {}).catch(function () {});
+							self.nextPage().then(function () { }).catch(function () { });
 						}
 						break;
 				}
@@ -23476,8 +23480,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		//determine persistent layout storage type
 
 		var mode = this.table.options.persistenceMode,
-		    id = this.table.options.persistenceID,
-		    retreivedData;
+			id = this.table.options.persistenceID,
+			retreivedData;
 
 		this.mode = mode !== true ? mode : this.localStorageTest() ? "local" : "cookie";
 
@@ -23563,8 +23567,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	Persistence.prototype.initializeColumn = function (column) {
 		var self = this,
-		    def,
-		    keys;
+			def,
+			keys;
 
 		if (this.config.columns) {
 			this.defWatcherBlock = true;
@@ -23622,7 +23626,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	//merge old and new column definitions
 	Persistence.prototype.mergeDefinition = function (oldCols, newCols) {
 		var self = this,
-		    output = [];
+			output = [];
 
 		// oldCols = oldCols || [];
 		newCols = newCols || [];
@@ -23630,7 +23634,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		newCols.forEach(function (column, to) {
 
 			var from = self._findColumn(oldCols, column),
-			    keys;
+				keys;
 
 			if (from) {
 
@@ -23770,13 +23774,13 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	//parse columns for data to store
 	Persistence.prototype.parseColumns = function (columns) {
 		var self = this,
-		    definitions = [],
-		    excludedKeys = ["headerContextMenu", "headerMenu", "contextMenu", "clickMenu"];
+			definitions = [],
+			excludedKeys = ["headerContextMenu", "headerMenu", "contextMenu", "clickMenu"];
 
 		columns.forEach(function (column) {
 			var defStore = {},
-			    colDef = column.getDefinition(),
-			    keys;
+				colDef = column.getDefinition(),
+				keys;
 
 			if (column.isGroup) {
 				defStore.title = colDef.title;
@@ -23824,10 +23828,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		},
 		cookie: function cookie(id, type) {
 			var cookie = document.cookie,
-			    key = id + "-" + type,
-			    cookiePos = cookie.indexOf(key + "="),
-			    end,
-			    data;
+				key = id + "-" + type,
+				cookiePos = cookie.indexOf(key + "="),
+				end,
+				data;
 
 			//if cookie exists, decode and load column data into tabulator
 			if (cookiePos > -1) {
@@ -23897,12 +23901,12 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	Print.prototype.printFullscreen = function (visible, style, config) {
 		var scrollX = window.scrollX,
-		    scrollY = window.scrollY,
-		    headerEl = document.createElement("div"),
-		    footerEl = document.createElement("div"),
-		    tableEl = this.table.modules.export.genereateTable(typeof config != "undefined" ? config : this.table.options.printConfig, typeof style != "undefined" ? style : this.table.options.printStyled, visible, "print"),
-		    headerContent,
-		    footerContent;
+			scrollY = window.scrollY,
+			headerEl = document.createElement("div"),
+			footerEl = document.createElement("div"),
+			tableEl = this.table.modules.export.genereateTable(typeof config != "undefined" ? config : this.table.options.printConfig, typeof style != "undefined" ? style : this.table.options.printStyled, visible, "print"),
+			headerContent,
+			footerContent;
 
 		this.manualBlock = true;
 
@@ -23966,8 +23970,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	ReactiveData.prototype.watchData = function (data) {
 		var self = this,
-		    pushFunc,
-		    version;
+			pushFunc,
+			version;
 
 		this.currentVersion++;
 
@@ -24067,10 +24071,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 			configurable: true,
 			value: function value() {
 				var args = Array.from(arguments),
-				    start = args[0] < 0 ? data.length + args[0] : args[0],
-				    end = args[1],
-				    newRows = args[2] ? args.slice(2) : false,
-				    startRow;
+					start = args[0] < 0 ? data.length + args[0] : args[0],
+					end = args[1],
+					newRows = args[2] ? args.slice(2) : false,
+					startRow;
 
 				if (!self.blocked && version === self.currentVersion) {
 
@@ -24145,8 +24149,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	ReactiveData.prototype.watchTreeChildren = function (row) {
 		var self = this,
-		    childField = row.getData()[this.table.options.dataTreeChildField],
-		    origFuncs = {};
+			childField = row.getData()[this.table.options.dataTreeChildField],
+			origFuncs = {};
 
 		function rebuildTree() {
 			self.table.modules.dataTree.initializeRow(row);
@@ -24230,9 +24234,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	ReactiveData.prototype.watchKey = function (row, data, key) {
 		var self = this,
-		    props = Object.getOwnPropertyDescriptor(data, key),
-		    value = data[key],
-		    version = this.currentVersion;
+			props = Object.getOwnPropertyDescriptor(data, key),
+			value = data[key],
+			version = this.currentVersion;
 
 		Object.defineProperty(data, key, {
 			set: function set(newValue) {
@@ -24289,8 +24293,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	ResizeColumns.prototype.initializeColumn = function (type, column, element) {
 		var self = this,
-		    variableHeight = false,
-		    mode = this.table.options.resizableColumns;
+			variableHeight = false,
+			mode = this.table.options.resizableColumns;
 
 		//set column resize mode
 		if (type === "header") {
@@ -24458,7 +24462,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	ResizeRows.prototype.initializeRow = function (row) {
 		var self = this,
-		    rowEl = row.getElement();
+			rowEl = row.getElement();
 
 		var handle = document.createElement('div');
 		handle.className = "tabulator-row-resize-handle";
@@ -24561,7 +24565,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		var _this82 = this;
 
 		var table = this.table,
-		    tableStyle;
+			tableStyle;
 
 		this.tableHeight = table.element.clientHeight;
 		this.tableWidth = table.element.clientWidth;
@@ -24672,7 +24676,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	//generate resposive columns list
 	ResponsiveLayout.prototype.initialize = function () {
 		var self = this,
-		    columns = [];
+			columns = [];
 
 		this.mode = this.table.options.responsiveLayout;
 		this.collapseFormatter = this.table.options.responsiveLayoutCollapseFormatter || this.formatCollapsedData;
@@ -24707,7 +24711,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		}
 
 		//assign collapse column
-		for (var _iterator = this.table.columnManager.columnsByIndex, _isArray = Array.isArray(_iterator), _i16 = 0, _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();;) {
+		for (var _iterator = this.table.columnManager.columnsByIndex, _isArray = Array.isArray(_iterator), _i16 = 0, _iterator = _isArray ? _iterator : _iterator[Symbol.iterator](); ;) {
 			var _ref;
 
 			if (_isArray) {
@@ -24819,7 +24823,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	//redraw columns to fit space
 	ResponsiveLayout.prototype.update = function () {
 		var self = this,
-		    working = true;
+			working = true;
 
 		while (working) {
 
@@ -24866,7 +24870,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	ResponsiveLayout.prototype.generateCollapsedContent = function () {
 		var self = this,
-		    rows = this.table.rowManager.getDisplayRows();
+			rows = this.table.rowManager.getDisplayRows();
 
 		rows.forEach(function (row) {
 			self.generateCollapsedRowContent(row);
@@ -24881,7 +24885,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 			while (el.firstChild) {
 				el.removeChild(el.firstChild);
-			}contents = this.collapseFormatter(this.generateCollapsedRowData(row));
+			} contents = this.collapseFormatter(this.generateCollapsedRowData(row));
 			if (contents) {
 				el.appendChild(contents);
 			}
@@ -24890,9 +24894,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	ResponsiveLayout.prototype.generateCollapsedRowData = function (row) {
 		var self = this,
-		    data = row.getData(),
-		    output = [],
-		    mockCellComponent;
+			data = row.getData(),
+			output = [],
+			mockCellComponent;
 
 		this.hiddenColumns.forEach(function (column) {
 			var value = column.getFieldValue(data);
@@ -24938,7 +24942,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	ResponsiveLayout.prototype.formatCollapsedData = function (data) {
 		var list = document.createElement("table"),
-		    listContents = "";
+			listContents = "";
 
 		data.forEach(function (item) {
 			var div = document.createElement("div");
@@ -24980,7 +24984,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	SelectRow.prototype.initializeRow = function (row) {
 		var self = this,
-		    element = row.getElement();
+			element = row.getElement();
 
 		// trigger end of row selection
 		var endSelect = function endSelect() {
@@ -25213,7 +25217,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	//deselect a number of rows
 	SelectRow.prototype.deselectRows = function (rows, silent) {
 		var self = this,
-		    rowCount;
+			rowCount;
 
 		if (typeof rows == "undefined") {
 
@@ -25240,8 +25244,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	//deselect an individual row
 	SelectRow.prototype._deselectRow = function (rowInfo, silent) {
 		var self = this,
-		    row = self.table.rowManager.findRow(rowInfo),
-		    index;
+			row = self.table.rowManager.findRow(rowInfo),
+			index;
 
 		if (row) {
 			index = self.selectedRows.findIndex(function (selectedRow) {
@@ -25334,7 +25338,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		var children = this.table.modules.dataTree.getChildren(row);
 
 		if (select) {
-			for (var _iterator2 = children, _isArray2 = Array.isArray(_iterator2), _i18 = 0, _iterator2 = _isArray2 ? _iterator2 : _iterator2[Symbol.iterator]();;) {
+			for (var _iterator2 = children, _isArray2 = Array.isArray(_iterator2), _i18 = 0, _iterator2 = _isArray2 ? _iterator2 : _iterator2[Symbol.iterator](); ;) {
 				var _ref2;
 
 				if (_isArray2) {
@@ -25351,7 +25355,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 				this._selectRow(child, true);
 			}
 		} else {
-			for (var _iterator3 = children, _isArray3 = Array.isArray(_iterator3), _i19 = 0, _iterator3 = _isArray3 ? _iterator3 : _iterator3[Symbol.iterator]();;) {
+			for (var _iterator3 = children, _isArray3 = Array.isArray(_iterator3), _i19 = 0, _iterator3 = _isArray3 ? _iterator3 : _iterator3[Symbol.iterator](); ;) {
 				var _ref3;
 
 				if (_isArray3) {
@@ -25381,9 +25385,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	//initialize column header for sorting
 	Sort.prototype.initializeColumn = function (column, content) {
 		var self = this,
-		    sorter = false,
-		    colEl,
-		    arrowEl;
+			sorter = false,
+			colEl,
+			arrowEl;
 
 		switch (_typeof(column.definition.sorter)) {
 			case "string":
@@ -25429,8 +25433,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 			//sort on click
 			colEl.addEventListener("click", function (e) {
 				var dir = "",
-				    sorters = [],
-				    match = false;
+					sorters = [],
+					match = false;
 
 				if (column.modules.sort) {
 					if (column.modules.sort.tristate) {
@@ -25507,7 +25511,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	//return current sorters
 	Sort.prototype.getSort = function () {
 		var self = this,
-		    sorters = [];
+			sorters = [];
 
 		self.sortList.forEach(function (item) {
 			if (item.column) {
@@ -25521,7 +25525,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	//change sort list and trigger sort
 	Sort.prototype.setSort = function (sortList, dir) {
 		var self = this,
-		    newSortList = [];
+			newSortList = [];
 
 		if (!Array.isArray(sortList)) {
 			sortList = [{ column: sortList, dir: dir }];
@@ -25556,9 +25560,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	//find appropriate sorter for column
 	Sort.prototype.findSorter = function (column) {
 		var row = this.table.rowManager.activeRows[0],
-		    sorter = "string",
-		    field,
-		    value;
+			sorter = "string",
+			field,
+			value;
 
 		if (row) {
 			row = row.getData();
@@ -25596,10 +25600,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	//work through sort list sorting data
 	Sort.prototype.sort = function (data) {
 		var self = this,
-		    sortList = this.table.options.sortOrderReverse ? self.sortList.slice().reverse() : self.sortList,
-		    sortListActual = [],
-		    rowComponents = [],
-		    lastSort;
+			sortList = this.table.options.sortOrderReverse ? self.sortList.slice().reverse() : self.sortList,
+			sortListActual = [],
+			rowComponents = [],
+			lastSort;
 
 		if (self.table.options.dataSorting) {
 			self.table.options.dataSorting.call(self.table, self.getSort());
@@ -25793,8 +25797,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		//sort datetime
 		datetime: function datetime(a, b, aRow, bRow, column, dir, params) {
 			var format = params.format || "DD/MM/YYYY HH:mm:ss",
-			    alignEmptyValues = params.alignEmptyValues,
-			    emptyAlign = 0;
+				alignEmptyValues = params.alignEmptyValues,
+				emptyAlign = 0;
 
 			if (typeof moment != "undefined") {
 				a = moment(a, format);
@@ -25898,13 +25902,13 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		//sort alpha numeric strings
 		alphanum: function alphanum(as, bs, aRow, bRow, column, dir, params) {
 			var a,
-			    b,
-			    a1,
-			    b1,
-			    i = 0,
-			    L,
-			    rx = /(\d+)|(\D+)/g,
-			    rd = /\d/;
+				b,
+				a1,
+				b1,
+				i = 0,
+				L,
+				rx = /(\d+)|(\D+)/g,
+				rd = /\d/;
 			var alignEmptyValues = params.alignEmptyValues;
 			var emptyAlign = 0;
 
@@ -25957,8 +25961,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	//validate
 	Validate.prototype.initializeColumn = function (column) {
 		var self = this,
-		    config = [],
-		    validator;
+			config = [],
+			validator;
 
 		if (column.definition.validator) {
 
@@ -26027,8 +26031,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	Validate.prototype.validate = function (validators, cell, value) {
 		var self = this,
-		    valid = [],
-		    invalidIndex = this.invalidCells.indexOf(cell);
+			valid = [],
+			invalidIndex = this.invalidCells.indexOf(cell);
 
 		if (validators) {
 			validators.forEach(function (item) {
